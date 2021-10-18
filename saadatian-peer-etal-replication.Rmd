@@ -1,5 +1,5 @@
 ---
-title: "Replication of 'Data quality of platforms and panels for online behavioral research' by Peer et al. (2021, Psychological Science)"
+title: "Replication of 'Data quality of platforms and panels for online behavioral research' by Peer et al. (2021, Behavior Research Methods)"
 author: "Kimia Saadatian (kimia@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
