@@ -29,7 +29,7 @@ As of right now, I do not anticipate running into any challenges in replicating 
 
 Project repository: https://github.com/psych251/saadatian2021.git
 
-Original paper: https://github.com/psych251/saadatian2021/blob/3e186b247fb8d8536c3deb701728267ee34d50dc/Rattan%20&%20Dweck%20(2010).pdf
+Original paper: https://github.com/psych251/saadatian2021/blob/3c2eeb3b8a352c51dea439f7878b2ab95f67acff/original-paper/Peer%20et%20al.%20(2021).pdf
 
 Original study's OSF: https://osf.io/342dp/
 
