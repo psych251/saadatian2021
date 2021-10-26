@@ -102,13 +102,12 @@ CloudResearch of "block low data quality workers"
 
 I plan to follow the exact analyses that were conducted in the original study.
 
-The main analysis I am replicating from study 2nwhere Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
+The main analysis I am replicating from study 2, where Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
 
 
-In order to compute the overall data quality score, the original authors "used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for
-(across the items per aspect) and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability
-coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of
-attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
+In order to compute the overall data quality score, the original authors "used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for (across the items per aspect) 
+and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability
+coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
 
 
 ### Differences from Original Study
@@ -151,29 +150,6 @@ Data preparation following the analysis plan.
 The analyses as specified in the analysis plan.  
 
 *Side-by-side graph with original graph is ideal here*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 -----
 
