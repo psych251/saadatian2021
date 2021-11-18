@@ -4,8 +4,8 @@ username:
 account: rpubs
 server: rpubs.com
 hostUrl: rpubs.com
-appId: https://api.rpubs.com/api/v1/document/823499/7690f6d890864eff8ba8c07d79b17ba7
-bundleId: https://api.rpubs.com/api/v1/document/823499/7690f6d890864eff8ba8c07d79b17ba7
-url: http://rpubs.com/publish/claim/823499/5b0d7c47f45445828603b46f897a9b9a
-when: 1634528782.66467
-lastSyncTime: 1634528782.66469
+appId: https://api.rpubs.com/api/v1/document/836807/408d49a1ce164c328266ad752e66d02c
+bundleId: https://api.rpubs.com/api/v1/document/836807/408d49a1ce164c328266ad752e66d02c
+url: http://rpubs.com/kimiasaadatian/836807
+when: 1637178459.2204
+lastSyncTime: 1637178459.22042

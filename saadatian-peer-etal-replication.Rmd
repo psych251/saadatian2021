@@ -29,6 +29,8 @@ As of right now, I do not anticipate running into any challenges in replicating 
 
 Project repository: https://github.com/psych251/saadatian2021.git
 
+Survey Preview Link:https://ucbpsych.qualtrics.com/jfe/preview/SV_cSKr5voz0akZ7P8?Q_CHL=preview&Q_SurveyVersionID=current
+
 Original paper: https://github.com/psych251/saadatian2021/blob/3c2eeb3b8a352c51dea439f7878b2ab95f67acff/original-paper/Peer%20et%20al.%20(2021).pdf
 
 Original study's OSF: https://osf.io/342dp/
@@ -39,7 +41,9 @@ Original study's OSF: https://osf.io/342dp/
 
 Main analysis I am replicating is "We found statistically significant differences between the sites on this measure (overall data quality score), F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9)).
 
-I will use an effect size converting spreadsheet to convert the f statistic to an r value, get square root of r, and plug that into g*power to get a projected sample size of -- participants for power = .95 
+For a power of 0.95, I will need 43 Participants in each group. If I run the study on all three platforms (Mturk, CloudResearch, and Prolific), that would add up to a total of 129 participants. 
+
+
 
 
 ### Planned Sample
@@ -95,8 +99,10 @@ and are approved by the researcher), and how often (if at all) they use other si
 
 "We will apply data quality filters on all three sites in the following scheme:
 1) MTurk - only workers who have completed 100 submissions or more and 95% of those submissions were approved.
-2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions were approved + the default setting on
-CloudResearch of "block low data quality workers"
+2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions were approved + the default setting on CloudResearch of "block low data quality workers"
+
+
+I will be replicating their study 2, which originally averaged around 9.8 minutes long (SD = 5.2).
 
 ### Analysis Plan
 
@@ -109,21 +115,33 @@ In order to compute the overall data quality score, the original authors "used c
 and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability
 coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
 
+The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6) 
+Overall data quality composite scores ranked from highest to lowest were:
+Prolific (M = 5.87, SD = 1.0) 
+CR ( M = 5.78, SD =  1.1) 
+MTurk (M = 4.55, SD = 1.9)
+
+They found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p < .001
+
+Post hoc tests with Bonferroni correction:
+
+differences between Prolific and MTurk p < .001 
+differences between CR and MTurk p < .001 
+difference between CR and Prolific  p = 0.91. 
+
 
 ### Differences from Original Study
-
 I do not anticipate any deviations from the original analysis plan at this stage.
 
 
 ### Methods Addendum (Post Data Collection)
-
 You can comment this section out prior to final report with data collection.
 
 #### Actual Sample
   Sample size, demographics, data exclusions based on rules spelled out in analysis plan
 
 #### Differences from pre-data collection methods plan
-  Any differences from what was described as the original plan, or “none”.
+  None
 
 
 ## Results
@@ -148,6 +166,46 @@ Data preparation following the analysis plan.
 ### Confirmatory analysis
 
 The analyses as specified in the analysis plan.  
+
+I will report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across all sites.
+
+ATTENTION
+(originally : ACQs, χ2(4) = 548.48, 203.56, p < .001. )
+
+```{r include=F}
+
+```
+
+
+COMPREHENSION
+(originally : χ2(4) = 152.4, p < .001 )
+
+```{r include=F}
+
+```
+
+HONESTY
+(originally :  χ2(4) = 153.44, p < .001 )
+
+```{r include=F}
+
+```
+
+
+RELIABILITY
+(originally :  )
+
+```{r include=F}
+
+```
+
+OVERALL DATA QUALITY SCORES
+(originally : "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measur- ing the same construct. Rather, it is used here as a multifacto- rial measure that attests to the overall general level of data quality")
+
+```{r include=F}
+
+```
+
 
 *Side-by-side graph with original graph is ideal here*
 
