@@ -19,7 +19,7 @@ output:
 
 ### Justification for choice of study
 
-I will be replicating a recent study by Peer et al. (2021), which compared data quality (attention, comprehension, reliability and honesty) between multiple sites used for online participant recruitment: Amazon MTurk, CloudResearch (formerly TurkPrime) and Prolific.
+I will be replicating a study by Peer et al. (2021), which compared data quality (attention, comprehension, reliability and honesty) between multiple sites used for online participant recruitment: Amazon MTurk, CloudResearch (formerly TurkPrime) and Prolific.
 
 ### Anticipated challenges
 
@@ -29,7 +29,9 @@ As of right now, I do not anticipate running into any challenges in replicating 
 
 Project repository: https://github.com/psych251/saadatian2021.git
 
-Survey Preview Link:https://ucbpsych.qualtrics.com/jfe/preview/SV_cSKr5voz0akZ7P8?Q_CHL=preview&Q_SurveyVersionID=current
+Survey preview: https://ucbpsych.qualtrics.com/jfe/preview/SV_cSKr5voz0akZ7P8?Q_CHL=preview&Q_SurveyVersionID=current
+
+Project OSF: https://osf.io/qw4sf/?view_only=49333769f6464316a805d48e8cd1d5ca
 
 Original paper: https://github.com/psych251/saadatian2021/blob/3c2eeb3b8a352c51dea439f7878b2ab95f67acff/original-paper/Peer%20et%20al.%20(2021).pdf
 
@@ -39,10 +41,9 @@ Original study's OSF: https://osf.io/342dp/
 
 ### Power Analysis
 
-Main analysis I am replicating is "We found statistically significant differences between the sites on this measure (overall data quality score), F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9)).
+Main analysis I am replicating is "We found statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9)).
 
-For a power of 0.95, I will need 43 Participants in each group. If I run the study on all three platforms (Mturk, CloudResearch, and Prolific), that would add up to a total of 129 participants. 
-
+For a power of 0.95, I will need 43 Participants in each group. However, to get precise estimates of the differences, I will recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific), adding to a total of 300 participants.
 
 
 
@@ -102,18 +103,16 @@ and are approved by the researcher), and how often (if at all) they use other si
 2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions were approved + the default setting on CloudResearch of "block low data quality workers"
 
 
-I will be replicating their study 2, which originally averaged around 9.8 minutes long (SD = 5.2).
+I will be replicating their study 2, which originally averaged around 9.8 minutes long (SD = 5.2). Participants will be paid $1.50 to participate in this ~10 minutes-long survey.
 
 ### Analysis Plan
 
-I plan to follow the exact analyses that were conducted in the original study.
+I plan to follow the same analyses that were conducted in the original study.
 
-The main analysis I am replicating from study 2, where Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
+The main analysis I am replicating is from study 2, where Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
 
 
-In order to compute the overall data quality score, the original authors "used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for (across the items per aspect) 
-and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability
-coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
+In order to compute the overall data quality score, the original authors "used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for (across the items per aspect) and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
 
 The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6) 
 Overall data quality composite scores ranked from highest to lowest were:
@@ -135,13 +134,10 @@ I do not anticipate any deviations from the original analysis plan at this stage
 
 
 ### Methods Addendum (Post Data Collection)
-You can comment this section out prior to final report with data collection.
 
 #### Actual Sample
-  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
 
 #### Differences from pre-data collection methods plan
-  None
 
 
 ## Results
@@ -200,7 +196,7 @@ RELIABILITY
 ```
 
 OVERALL DATA QUALITY SCORES
-(originally : "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measur- ing the same construct. Rather, it is used here as a multifacto- rial measure that attests to the overall general level of data quality")
+(originally: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifacto- rial measure that attests to the overall general level of data quality")
 
 ```{r include=F}
 
@@ -213,14 +209,13 @@ OVERALL DATA QUALITY SCORES
 
 ### Exploratory analyses
 
-Any follow-up analyses desired (not required).  
 
 ## Discussion
 
 ### Summary of Replication Attempt
 
-Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+-> Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
 
 ### Commentary
 
-Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+-> dd open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
