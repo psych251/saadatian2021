@@ -1,5 +1,6 @@
 ---
-title: "Replication of 'Data quality of platforms and panels for online behavioral research' by Peer et al. (2021, Behavior Research Methods)"
+title: Replication of 'Data quality of platforms and panels for online behavioral
+  research' by Peer et al. (2021, Behavior Research Methods)
 author: "Kimia Saadatian (kimia@stanford.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output:
@@ -7,8 +8,11 @@ output:
     toc: yes
     toc_depth: 3
     toc_float:
-      collapsed: no  
+      collapsed: no
   pdf_document:
+    toc: yes
+    toc_depth: '3'
+  word_document:
     toc: yes
     toc_depth: '3'
 ---
@@ -146,17 +150,101 @@ I do not anticipate any deviations from the original analysis plan at this stage
 ### Data preparation
 
 Data preparation following the analysis plan.
-	
-```{r include=F}
+
+```{r, echo=FALSE}
+### Fixing error with knitting
+#### RMarkdown v1 used error = TRUE by default, but RMarkdown v2 uses error = FALSE.
+
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r}
 ###Data Preparation
+##### Starting a Script #####
+
+  # Clear environment
+    rm(list=ls())
+
+  # Checking working directory
+    getwd()
+
+  #### Loading in data ####
+    
+    # Load csv
+      dat <- read.csv("pilotB-replication.csv",
+                       na.strings="NA", strip.white=TRUE)
 
 ####Load Relevant Libraries and Functions
+    library(tidyverse)
+    library(dplyr)
+    library(car)
+    library(ggplot2)
 
-####Import data
+##### Looking at your data #####
+      
+  #### Identifying problems ####
+      
+    # Finding the number of duplicate cases
+      # WARNING: These do not include the first instance of the duplicated value.
+      length(dat$id) - length(unique(dat$id))
+      
+    # Finding rows of duplicate cases. 
+      # WARNING: These do not include the first instance of the duplicated value.
+      which(duplicated(dat$column))
+      
+  #### Looking at your whole dataset ####
+      
+      # Get names, data types, and first 10 data points of every column 
+        str(dat)
+      
+      # Get a list of column names of your data (in order)
+        colnames(dat)
+        
+      # Show the first five rows of your data. 
+        head(dat)
+        
+      # Show the whole dataset in the data viewer
+        View(dat)
+        
+      # Get the number of rows in your dataset
+        nrow(dat)
+      
+      # Get the number of columns in your dataset
+        ncol(dat)
+        
+      # Looking at a random set of 10 observations
+        sample_n(dat, 10)
+      
+      # Look at whole dataframe
+        library(summarytools)
+        view(dfSummary(dat))
+
+ #### Looking at columns ####
+      
+    # View the levels of a factor and their order
+      levels(dat$cond)
+      
+    # View a summary of your data (count of each factor level for factors, numeric summary for numeric)
+      summary(dat)
+    
+  #### Summary statistics ####
+   # Getting summary values with the standard error. Good for plotting. 
+      # Rmisc package
+      datsum <- summarySE(dat, eachmeasure ="value",
+          groupvars=c("platform","variable"))
 
 #### Data exclusion / filtering
+  #### Removing unwanted data ####
+      
+    # Omitting rows with NAs
+      data <- na.omit(dat)
+    
 
 #### Prepare data for analysis - create columns etc.
+      
+      filtered_data %>% 
+  group_by(sample) %>% 
+  summarize(avg_sales = mean(sales))
 ```
 
 ### Confirmatory analysis
@@ -168,40 +256,74 @@ I will report differences between sites on each data quality measure and then ag
 ATTENTION
 (originally : ACQs, χ2(4) = 548.48, 203.56, p < .001. )
 
-```{r include=F}
+```{r}
+recode firstacq1 so that :
+   pass if  acq1 = "6" ; fail ifelse
+recode firstacq2 so that :
+   pass if acq2 = "3" ; fail ifelse
+firstacq <- c(acq1, acq2)
 
+recode secondacq so that : 
+    pass if nfc12 = '1' ; fail ifelse
 ```
 
 
 COMPREHENSION
 (originally : χ2(4) = 152.4, p < .001 )
 
-```{r include=F}
-
+```{r}
+Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
+  
+manually code open responses to firstcomprehension1
+manually code open responses to secondcomprehension1
 ```
 
 HONESTY
 (originally :  χ2(4) = 153.44, p < .001 )
 
-```{r include=F}
-
+```{r}
+fifth problem was unsolvable and the original investigators focused on this problem’s reports as a measure of dishonesty3.
 ```
 
 
 RELIABILITY
-(originally :  )
+(originally : )
 
-```{r include=F}
+```{r}
+"Reliability was measured using the NFC scale (Cacioppo et al., 1984), which measures the extent to which respondents like to engage in and enjoy thinking.
+The negatively worded items were recoded before analyses.
+We chose these scales because they have been found as highly reliable and were validated across extensive studies previously."
 
+nfc<- c(nfc1 to nfc11, nfc13 to nfc18)
+ recode reversescored items
 ```
 
 OVERALL DATA QUALITY SCORES
-(originally: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifacto- rial measure that attests to the overall general level of data quality")
+(originally: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality")
 
-```{r include=F}
-
+```{r}
+dataquality <- c(acq1,acq2,comprehension1,comprehension2,honesty)
 ```
 
+LOOKING AT ALL MEANS ON EACH PLATFORM
+```{r}
+dat %>% 
+  group_by(platform) %>%
+  summarize(avgvariable = mean(variable, na.rm = T)) # the na.rm tells R to ignore NA values
+```
+
+
+COMPARING DATA QUALITY ACROSS THE THREE GROUPS
+```{r}
+# Compute one-way ANOVA
+difone <- aov(mturk ~ prolific, data = dat)
+diftwo <- aov(mturk ~ cloudresearch, data = dat)
+difthree <- aov(cloudresearch ~ prolific, data = dat)
+# Summary of one-way ANOVA
+summary(difone)
+summary(diftwo)
+summary(difthree)
+```
 
 *Side-by-side graph with original graph is ideal here*
 
