@@ -211,13 +211,6 @@ knitr::opts_chunk$set(error = TRUE)
       
       # Get the number of columns in your dataset
         ncol(dat)
-        
-      # Looking at a random set of 10 observations
-        sample_n(dat, 10)
-      
-      # Look at whole dataframe
-        library(summarytools)
-        view(dfSummary(dat))
 
  #### Looking at columns ####
       
@@ -226,25 +219,29 @@ knitr::opts_chunk$set(error = TRUE)
       
     # View a summary of your data (count of each factor level for factors, numeric summary for numeric)
       summary(dat)
-    
+ 
   #### Summary statistics ####
    # Getting summary values with the standard error. Good for plotting. 
       # Rmisc package
-      datsum <- summarySE(dat, eachmeasure ="value",
-          groupvars=c("platform","variable"))
+    #  datsum <- summarySE(dat, eachmeasure ="value",
+    #      groupvars=c("sample","variable"))
 
 #### Data exclusion / filtering
   #### Removing unwanted data ####
       
     # Omitting rows with NAs
       data <- na.omit(dat)
-    
-
-#### Prepare data for analysis - create columns etc.
-      
-      filtered_data %>% 
-  group_by(sample) %>% 
-  summarize(avg_sales = mean(sales))
+    # Omitting unnecessary columns
+    #  filtered_dat <- dat %>%
+     #   filter(sample, age, gender, 
+    #          ac1, ac2, ac3,
+      #        comprehension1, comprehension2,
+       #       honesty1, honesty2, honesty3,
+      #        nfc1, nfc2, nfc3, nfc4, nfc5, 
+      #        nfc6, nfc7, nfc8, nfc9, nfc10, 
+      #        nfc11, nfc12, nfc13, nfc14, 
+       #       nfc15, nfc16,nfc17, nfc18,
+        #      ) 
 ```
 
 ### Confirmatory analysis
@@ -257,14 +254,17 @@ ATTENTION
 (originally : ACQs, χ2(4) = 548.48, 203.56, p < .001. )
 
 ```{r}
-recode firstacq1 so that :
-   pass if  acq1 = "6" ; fail ifelse
-recode firstacq2 so that :
-   pass if acq2 = "3" ; fail ifelse
-firstacq <- c(acq1, acq2)
+#recode firstacq1 so that : pass if  acq1 = "6" ; fail ifelse
+##dat$newac1 <- recode(ac1, '6' = "pass",'1-5' = "fail")
+ac1_dummy <- ifelse(dat$ac1=="6",1,0)
+#recode firstacq2 so that : pass if acq2 = "3" ; fail ifelse
+ac2_dummy <- ifelse(dat$ac2=="3",1,0)
 
-recode secondacq so that : 
-    pass if nfc12 = '1' ; fail ifelse
+ac3_dummy <- ifelse(dat$ac3=="1",1,0)
+
+ac <- cbind(ac1_dummy, ac2_dummy, ac3_dummy)
+
+#recode secondacq so that :  pass if nfc12 = '1' ; fail ifelse
 ```
 
 
@@ -272,17 +272,23 @@ COMPREHENSION
 (originally : χ2(4) = 152.4, p < .001 )
 
 ```{r}
-Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
+#Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
   
-manually code open responses to firstcomprehension1
-manually code open responses to secondcomprehension1
+##manually code open responses to comprehension1
+##manually code open responses to comprehension2
+comprehension <- cbind(dat$comprehension1, dat$comprehension2)
 ```
 
 HONESTY
 (originally :  χ2(4) = 153.44, p < .001 )
 
 ```{r}
-fifth problem was unsolvable and the original investigators focused on this problem’s reports as a measure of dishonesty3.
+## code responses to honesty manually so that:
+### honesty1 - 0 = not honest 1 = honest
+### honesty2  - # 0 = not honest 1 = honest
+### honesty3 - # 0 = not honest 1 = honest 2 = other
+
+honesty <- cbind(dat$honesty2, dat$honesty3)
 ```
 
 
@@ -290,39 +296,53 @@ RELIABILITY
 (originally : )
 
 ```{r}
-"Reliability was measured using the NFC scale (Cacioppo et al., 1984), which measures the extent to which respondents like to engage in and enjoy thinking.
-The negatively worded items were recoded before analyses.
-We chose these scales because they have been found as highly reliable and were validated across extensive studies previously."
+#"Reliability was measured using the [five-point] NFC scale (Cacioppo et al., 1984), which measures the extent to which respondents like to engage in and enjoy thinking.... We chose these scales because they have been found as highly reliable and were validated across extensive studies previously."
 
-nfc<- c(nfc1 to nfc11, nfc13 to nfc18)
- recode reversescored items
+# The original authors re-coded the negatively worded items before analyses but here, our code shows the reverse scored items.
+
+nfc<- cbind(dat$nfc1, dat$nfc2, 6-dat$nfc3, 6-dat$nfc4, 
+            6-dat$nfc5, dat$nfc6, 6-dat$nfc7, 6-dat$nfc8, 
+            6-dat$nfc9, dat$nfc10, dat$nfc11, 6-dat$nfc12, 
+            dat$nfc13, dat$nfc14, dat$nfc15, 6-dat$nfc16,
+            6-dat$nfc17, dat$nfc18 
+            )
+
+nfc<- cbind(dat$nfc1, dat$nfc2, dat$nfc3, dat$nfc4, 
+          dat$nfc5, dat$nfc6, dat$nfc7, dat$nfc8, 
+      dat$nfc9, dat$nfc10, dat$nfc11, dat$nfc12, 
+            dat$nfc13, dat$nfc14, dat$nfc15, dat$nfc16,
+           dat$nfc17, dat$nfc18 
+            )
 ```
 
 OVERALL DATA QUALITY SCORES
 (originally: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality")
 
 ```{r}
-dataquality <- c(acq1,acq2,comprehension1,comprehension2,honesty)
+dataquality <- cbind(ac, comprehension, honesty,
+                     na.action = "na.omit")
 ```
 
 LOOKING AT ALL MEANS ON EACH PLATFORM
 ```{r}
 dat %>% 
-  group_by(platform) %>%
-  summarize(avgvariable = mean(variable, na.rm = T)) # the na.rm tells R to ignore NA values
+  group_by(sample) %>%
+  summarize(dataquality) # the na.rm tells R to ignore NA values
 ```
-
 
 COMPARING DATA QUALITY ACROSS THE THREE GROUPS
 ```{r}
+# reshape the data so there is just one column representing the different platforms
+dat_long <- dat %>% pivot_longer(cols=-c("sample", "dataquality"), # this tells it to transform all columns *except* these ones
+                             names_to='sample', 
+                             values_to='dataquality',
+                             na.rm = T)
+
+
 # Compute one-way ANOVA
-difone <- aov(mturk ~ prolific, data = dat)
-diftwo <- aov(mturk ~ cloudresearch, data = dat)
-difthree <- aov(cloudresearch ~ prolific, data = dat)
+singleANOVA <- aov(dataquality ~ sample, data = dat)
 # Summary of one-way ANOVA
-summary(difone)
-summary(diftwo)
-summary(difthree)
+summary(singleANOVA)
 ```
 
 *Side-by-side graph with original graph is ideal here*
