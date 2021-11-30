@@ -17,17 +17,21 @@ output:
     toc_depth: '3'
 ---
 
-<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
-
 ## Introduction
 
 ### Justification for choice of study
 
-I will be replicating a study by Peer et al. (2021), which compared data quality (attention, comprehension, reliability and honesty) between multiple sites used for online participant recruitment: Amazon MTurk, CloudResearch (formerly TurkPrime) and Prolific.
+I am replicating a recent study by Peer et al. (March, 2021), in which they compared quality of data gathered from the most popular sites used for online participant recruitment — Amazon MTurk, CloudResearch (formerly TurkPrime), and Prolific. Peer et al. (2021) found "higher data quality for Prolific and CloudResearch compared to MTurk (the differences between Prolific and MTurk and between CR and MTurk were significant (p < .001), but the difference between CR and Prolific was not (p = 0.91))."
+
+
+In response, associates of the site CloudResearch, Litman et al. (2021, SSRN), attempted to replicate Peer et al.'s (2021) findings and found "undisclosed methodological decisions that would limit the inferences made in [the original publication]" (Litman et al., 2021). The team from CloudResearch were specifically concerned that Peer et al. (2021) "chose to turn off the recommended data quality filters and reputation qualifications, including filters that are on by default and were designed to address known data quality issues on MTurk." Contrary to the findings from Peer et al., (2021), upon implementing what they claim are recommended and default filters on MTurk, the team at CloudResearch (Litman et al., 2021) found CloudResearch’s  data quality superior to that of Prolific. 
+
+I am curious to examine the data quality filters that were used in each of these studies and investigate these sites' data quality as a relatively-objective third-party investigator.
 
 ### Anticipated challenges
 
-As of right now, I do not anticipate running into any challenges in replicating the results from the original study.
+The only challenges I anticipate at this stage is tracking and figuring out the specific automated/default, and manually-set data quality filters that each team of researchers incorporated in their data collection process. 
+
 
 ### Links
 
@@ -45,96 +49,125 @@ Original study's OSF: https://osf.io/342dp/
 
 ### Power Analysis
 
-Main analysis I am replicating is "We found statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9)).
+Here I aim to replicate the main finding in Study 2, where Peer et al., (2021) compare data quality across the three sites and find "statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9))".
 
-For a power of 0.95, I will need 43 Participants in each group. However, to get precise estimates of the differences, I will recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific), adding to a total of 300 participants.
-
+To replicate an F statistic of 129.4 with a power of 0.95, I would need a sample of 43 participants minimum from each site. However, to get precise estimates of the differences in data quality across the three sites, I recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific). Participants from these three independent samples should add up to a total of 300 participants for the study as a whole.
 
 
 ### Planned Sample
 
-I will recruit participants on Amazon MTurk, CloudResearch, and Prolific. Participants must be U.S. residents age 18 or above. Similar to the original study, I will exclude participants who do not complete all of the study.
+One hundred participants who are 18 years or older and ALSO current residents of the United States are recruited on Amazon MTurk, CloudResearch, and Prolific. Similar to the original study, participants are paid a $1.5 each for completing the study, which originally averaged around 9.8 minutes-long (SD = 5.2; Peer et al., 2021). 
 
-"We recruited 500 participants from each platform
-(MTurk, CR, and Prolific), who reported residing in the
-United States, in March 2021. Participants were paid 1.5
-USD on CR and MTurk and 1.1 GBP on Prolific plus a bonus
-of up to 0.5 USD/GBP. We applied data quality prescreening
-filters on all sites by restricting the study to participants with at
-least 95% approval rating and at least 100 previous submissions; on CR we also used the site setting to “block low data
-quality workers.” We excluded participants on Prolific who
-completed the previous study on Prolific and participants on
-CR who completed the previous study on CR or MTurk.
-However, because our study had to be posted twice on
-MTurk (once through our MTurk account and once through
-our CR account), 39 participants completed the study twice,
-and we removed their later submission (although they were
-still paid for their submissions). The final sample thus included 1461 participants who completed the study. Table 4 presents the samples. Additional demographics can be found in
-the Appendix."
+#### Data Quality Pre-screening
+The current study implements all data quality pre-screening filters that were used in the original study (Peer et al., 2021). Peer et al. (2021) describe the data quality pre-screening and exclusion criteria as:
 
-### Materials
+1) "Restricting the study to participants with at least 95% approval rating and at least 100 previous submissions" for participants recruited from all three sites
+2) Using the site setting to "block low data quality workers" on CloudResearch
+3) Excluding Prolific participants who completed their Study 1 on Prolific
+4) Excluding participants on CloudResearch completed their Study 1 on CloudResearch or MTurk
 
-"1. Attention is measured using two attention-check questions. The first asks participants to answer "six" and "three" to two items regardless of their actual
-preference (other responses are coded as failures); the second is an item within a scale worded "I currently don't pay attention to the questions I'm being
-asked in the survey" (response other than "strongly disagree" is coded as a failure)
-2. Comprehension is examined through the oral summaries of instructions to two tasks. The first task asks participants to identify faces in a picture, but
-includes an instruction to only report zero; the second includes instructions for the "Matrix task" (Mazar et al., 2008). Two raters will code the oral
-responses independently and blind to the origin of the participant. We will consider an answer correct if both readers agree it is correct, and will apply a
-third reader to any answer with splits.
-3. Reliability will be measured using Cronbach's alpha measure for the Need for Cognition scale.
-4. Honesty will be measured using an online version of the Matrix task (Mazar et al., 2008) that will include two unsolvable matrices. Reporting solving any
-of these two problems will be coded as a dishonest response. Additionally, we will examine whether participants lie about their eligibility for a future study
-by asking them to indicate if they want to be invited to a study that samples participants of their own gender but whose age will be described as 5-10 years
-above the age participants reported in the beginning of the study.
+*Note: since they had to post the survey twice on Mturk (once through their MTurk account and once through
+their CR account), some participants (N = 39) completed the survey twice. Peer et al. (2021) removed those participants' later submissions and I will be doing the same. 
 
-In addition we will examine drop-out rates, duration for completing the survey, overall response time and speed between sites, differences in NFC,
-demographics, and patterns of usage of the site (main purpose, frequency of usage, number of submissions and approval ratings, usage of other sites), and
-we will also ask participants to report did they complete a study similar to this study in the last months."
+
+Other necessary and recommended data quality filters mentioned by the team at CloudResearch are: 
+
+
+
+In the current study, I apply the following data quality filters on all three sites:
+*Used by Peer et al. (2021)*
+1) MTurk - only workers who have completed 100 submissions or more and 95% of those submissions are eligible
+2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions are eligible & 
+the default setting is set to "block low data quality workers"
+3) Prolific -  only workers who have completed 100 submissions or more and 95% of those submissions are eligible. 
+
+*Used by Litman et al. (2021)*
+4)
+
+#### Exclusions
+Similar to the original study (Peer et al., 2021), I will exclude participants who do not complete all of the study.
+
+
+### Measures
+
+#### Attention 
+-> *[ac1, ac2, ac3]*
+
+The original scholars measure attention using one two-item explicit question and one covert question. Similar to the original study, "the first [attention check] asks participants to answer "six" and "three" to two items regardless of their actual preference (other responses are coded as failures); the second is an item within a scale worded "I currently don't pay attention to the questions I'm being asked in the survey" (response other than "strongly disagree" is coded as a failure)."
+
+
+
+#### Comprehension
+-> *[comprehension1 and comprehension2]*
+
+Comprehension is examined via coding of participants' written summaries of instructions to two tasks. "The first task asks participants to identify faces in a picture, but includes an instruction to only report zero; the second includes instructions for the "Matrix task" (Mazar et al., 2008)."In the original study, two independent, blind raters coded the participant responses. The investigators counted an answer as correct if both coders had coded it as correct, applying a third rater to responses with split votes.
+Due to time constraints in data coding and analysis, the PI, Kimia Saadatian, is the sole rater of open responses to comprehension items. Following this class replication project, Kimia plans to have the data coded by two blind raters independently.
+
+
+
+#### Reliability  
+-> *[nfc1 to nfc18]*
+
+Similar to the original study, reliability is measured using Cronbach's alpha for the eighteen-item, five-point Need for Cognition scale (Cacioppo et al., 1984). The original investigators chose this scale because it has been validated and found to be highly reliable across many studies.
+
+
+
+#### Honesty 
+-> *[honesty 1, honesty2, honesty3]*
+
+Replicating the honesty measure in the original study, honesty is measured using "an online version of the Matrix task (Mazar et al., 2008) that include(s) two unsolvable matrices. Reporting solving any of these two problems will be coded as a dishonest response. Additionally, we examine whether participants lie about their eligibility for a future study by asking them to indicate if they want to be invited to a study that samples participants of their own gender but whose age will be described as 5-10 years above the age participants reported in the beginning of the study."
+
+
+
+#### Data Quality
+-> *[ac_total + comprehension_total + honesty_total]*
+
+Data quality was computed by calculating composite score of data quality based on the average scores of attention, comprehension, and dishonesty.
+
+
+#### Other measures
+*The below measures are not immediately relevant to the main analyses reported in this class project report.*
+
+To replicate the original study as closely as possible, we also measure participants' drop-out rates, response duration, overall response time and speed between sites, differences in responses to the NFC scale, demographics, and patterns of usage of the site (main purpose, frequency of usage, number of submissions and approval ratings, usage of other sites), and whether or not the participants have completed a similar study in the last months.
+
 
 ### Procedure	
 
-"Participants were invited to complete a survey on
-individual differences in personal attitudes, opinions, and behaviors. All participants began the survey by answering demographic questions, followed by the data quality measures
-described below. Participants finished the survey by answering questions related to their usage of the online platform
-including how often they use the site, for what purposes,
-how much they earn in an average week, their percent of
-approved submissions (responses that participants submit
-and are approved by the researcher), and how often (if at all) they use other sites."
+Mimicking the original survey introduction (Peer et al., 2021), the description of the currect study states : "You are invited to complete a survey on individual differences in personal attitudes, opinions, and behaviors." 
+
+I use the original .QSF file for the survey content, which begins with 
+demographic questions, followed by the data quality measures described above. 
+
+Participants are prompted with questions related to their usage of the online platform (e.g., how often they use the site, why they use it, how much they earn on average, their percent of approved submissions (responses that participants submit and are approved by the researcher), and how often (if at all) they use other sites) before finishing the survey and receiving their online payment.
 
 
-"We will apply data quality filters on all three sites in the following scheme:
-1) MTurk - only workers who have completed 100 submissions or more and 95% of those submissions were approved.
-2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions were approved + the default setting on CloudResearch of "block low data quality workers"
-
-
-I will be replicating their study 2, which originally averaged around 9.8 minutes long (SD = 5.2). Participants will be paid $1.50 to participate in this ~10 minutes-long survey.
+#### Deviations from the Original Study 
+: 1) not forced responses 2) original excludes those who dont complete the entire study but thats not reasonable so i probably wont
 
 ### Analysis Plan
 
-I plan to follow the same analyses that were conducted in the original study.
+The current study utilizes the same analyses that were conducted in the original study by Peer et al. (2021).
 
 The main analysis I am replicating is from study 2, where Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
 
 
-In order to compute the overall data quality score, the original authors "used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for (across the items per aspect) and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability coefficients using Hakistan & Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression."
+In order to compute the overall data quality score, the original authors:
 
-The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6) 
-Overall data quality composite scores ranked from highest to lowest were:
-Prolific (M = 5.87, SD = 1.0) 
-CR ( M = 5.78, SD =  1.1) 
-MTurk (M = 4.55, SD = 1.9)
+*Relevant for current EXPLORATORY analyses:*
 
-They found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p < .001
+- "Used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty
+- Computed average scores for (across the items per aspect)  
+- Compared them between sites using ANOVA and regression analyses. 
+- Tested for differences between reliability coefficients using Hakistan & Whalen (1976) method"
 
-Post hoc tests with Bonferroni correction:
+*Relevant for current CONFIRMATORY analyses:*
 
-differences between Prolific and MTurk p < .001 
-differences between CR and MTurk p < .001 
-difference between CR and Prolific  p = 0.91. 
+- "Computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty)
+- Compare composite score of data quality between sites using ANOVA and regression."
 
 
 ### Differences from Original Study
-I do not anticipate any deviations from the original analysis plan at this stage.
+I do not anticipate any deviations from the original *analysis plan* at this stage.
 
 
 ### Methods Addendum (Post Data Collection)
@@ -146,6 +179,20 @@ I do not anticipate any deviations from the original analysis plan at this stage
 
 ## Results
 
+### Results from Peer et al. (2021)
+The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6). Overall data quality composite scores ranked from highest to lowest were:
+1) Prolific (M = 5.87, SD = 1.0) 
+2) CR ( M = 5.78, SD =  1.1) 
+3) MTurk (M = 4.55, SD = 1.9)
+
+Peer et al. (2021) found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p < .001.
+
+Post hoc tests with Bonferroni correction showed:
+- differences between Prolific and MTurk p < .001 
+- differences between CR and MTurk p < .001 
+- difference between CR and Prolific  p = 0.91. 
+
+
 
 ### Data preparation
 
@@ -154,191 +201,157 @@ Data preparation following the analysis plan.
 ```{r, echo=FALSE}
 ### Fixing error with knitting
 #### RMarkdown v1 used error = TRUE by default, but RMarkdown v2 uses error = FALSE.
-
 knitr::opts_chunk$set(error = TRUE)
 ```
 
-```{r}
+```{r, Data Preparation}
 ###Data Preparation
 ##### Starting a Script #####
-
   # Clear environment
     rm(list=ls())
-
   # Checking working directory
     getwd()
 
   #### Loading in data ####
-    
-    # Load csv
-      dat <- read.csv("pilotB-replication.csv",
+      dat <- read.csv("pilotD_replication.csv",
                        na.strings="NA", strip.white=TRUE)
-
-####Load Relevant Libraries and Functions
+  ### Load Relevant Libraries and Functions
     library(tidyverse)
     library(dplyr)
     library(car)
     library(ggplot2)
+    library(ltm)
 
 ##### Looking at your data #####
-      
   #### Identifying problems ####
-      
     # Finding the number of duplicate cases
       # WARNING: These do not include the first instance of the duplicated value.
       length(dat$id) - length(unique(dat$id))
-      
     # Finding rows of duplicate cases. 
       # WARNING: These do not include the first instance of the duplicated value.
       which(duplicated(dat$column))
       
-  #### Looking at your whole dataset ####
-      
-      # Get names, data types, and first 10 data points of every column 
-        str(dat)
-      
-      # Get a list of column names of your data (in order)
-        colnames(dat)
-        
-      # Show the first five rows of your data. 
-        head(dat)
-        
-      # Show the whole dataset in the data viewer
-        View(dat)
-        
-      # Get the number of rows in your dataset
-        nrow(dat)
-      
-      # Get the number of columns in your dataset
-        ncol(dat)
-
- #### Looking at columns ####
-      
-    # View the levels of a factor and their order
-      levels(dat$cond)
-      
-    # View a summary of your data (count of each factor level for factors, numeric summary for numeric)
-      summary(dat)
- 
-  #### Summary statistics ####
-   # Getting summary values with the standard error. Good for plotting. 
-      # Rmisc package
-    #  datsum <- summarySE(dat, eachmeasure ="value",
-    #      groupvars=c("sample","variable"))
+  #### Looking at the dataset ####
+        colnames(dat) # list of column names in order
+        head(dat) # first five rows
+        View(dat) # view dataset
+        nrow(dat) # number of rows in dataset
+        ncol(dat) # number of columns in dataset
 
 #### Data exclusion / filtering
   #### Removing unwanted data ####
-      
     # Omitting rows with NAs
       data <- na.omit(dat)
-    # Omitting unnecessary columns
-    #  filtered_dat <- dat %>%
-     #   filter(sample, age, gender, 
-    #          ac1, ac2, ac3,
-      #        comprehension1, comprehension2,
-       #       honesty1, honesty2, honesty3,
-      #        nfc1, nfc2, nfc3, nfc4, nfc5, 
-      #        nfc6, nfc7, nfc8, nfc9, nfc10, 
-      #        nfc11, nfc12, nfc13, nfc14, 
-       #       nfc15, nfc16,nfc17, nfc18,
-        #      ) 
+    # Removing columns we don't need about for primary analyses
+      dat <- dat %>% 
+          dplyr::select(ac1, ac2, ac3, comprehension1, 
+                        comprehension2, contains("honesty"),
+                        ResponseId, site, sample
+                        )
 ```
-
 ### Confirmatory analysis
 
-The analyses as specified in the analysis plan.  
-
-I will report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across all sites.
+I report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across the three sites.
 
 ATTENTION
 (originally : ACQs, χ2(4) = 548.48, 203.56, p < .001. )
 
-```{r}
-#recode firstacq1 so that : pass if  acq1 = "6" ; fail ifelse
-##dat$newac1 <- recode(ac1, '6' = "pass",'1-5' = "fail")
-ac1_dummy <- ifelse(dat$ac1=="6",1,0)
-#recode firstacq2 so that : pass if acq2 = "3" ; fail ifelse
-ac2_dummy <- ifelse(dat$ac2=="3",1,0)
+```{r, Attention}
+#### recode ac1 so that : pass if  ac1 = "6" ; fail ifelse
+#### record ac2 so that : pass if ac2 = "3" ; fail ifelse
+#### recode ac3 so that :  pass if ac3 = '1' ; fail ifelse
 
-ac3_dummy <- ifelse(dat$ac3=="1",1,0)
-
-ac <- cbind(ac1_dummy, ac2_dummy, ac3_dummy)
-
-#recode secondacq so that :  pass if nfc12 = '1' ; fail ifelse
+dat <- dat %>% 
+  mutate(ac1_pass = ifelse(ac1 == "6", 1,0),
+         ac2_pass = ifelse(ac2 == "3", 1,0),
+         ac3_pass = ifelse(ac3 == "1", 1,0),
+         ac_total = (ac1_pass + ac2_pass + ac3_pass)
+         )
 ```
 
 
 COMPREHENSION
 (originally : χ2(4) = 152.4, p < .001 )
 
-```{r}
-#Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
-  
-##manually code open responses to comprehension1
-##manually code open responses to comprehension2
-comprehension <- cbind(dat$comprehension1, dat$comprehension2)
+```{r, Comprehension}
+#### Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
+  ### manually code open responses to comprehension1
+  ### manually code open responses to comprehension2
+
+dat <- dat %>% 
+  mutate(comprehension_total = (comprehension1 + comprehension2)
+         )
 ```
 
 HONESTY
 (originally :  χ2(4) = 153.44, p < .001 )
 
-```{r}
-## code responses to honesty manually so that:
-### honesty1 - 0 = not honest 1 = honest
-### honesty2  - # 0 = not honest 1 = honest
-### honesty3 - # 0 = not honest 1 = honest 2 = other
+```{r, Honesty}
+#### code responses to honesty manually so that:
+  ### honesty1 : 0 = not honest 1 = honest
+  ### honesty2  : 0 = not honest 1 = honest
+  ### honesty3 : 0 = not honest 1 = honest 2 = other
 
-honesty <- cbind(dat$honesty2, dat$honesty3)
+colnames(dat)
+dat <- dat %>%
+  mutate(honesty_total = (X1_honesty1 + X2_honesty1 +
+                    X3_honesty1 + X4_honesty1 + X5_honesty1 +
+                    honesty2)
+         )
 ```
 
 
 RELIABILITY
 (originally : )
 
-```{r}
-#"Reliability was measured using the [five-point] NFC scale (Cacioppo et al., 1984), which measures the extent to which respondents like to engage in and enjoy thinking.... We chose these scales because they have been found as highly reliable and were validated across extensive studies previously."
+```{r, Reliability}
+#### Reliability is measured using the cronbach alpha of the NFC scale
+# The original authors re-coded the negatively worded items of the NFC before running analyses but here, our code specifically defines the reverse scored items within this scale.
 
-# The original authors re-coded the negatively worded items before analyses but here, our code shows the reverse scored items.
+dat <- dat %>% 
+  mutate(nfc3_reversed = ifelse(ac1 == "6", 1,0),
+         nfc4_reversed = ifelse(ac2 == "3", 1,0),
+         nfc5_reversed = ifelse(ac3 == "1", 1,0),
+         nfc7_reversed = ifelse(ac1 == "6", 1,0),
+         nfc8_reversed = ifelse(ac2 == "3", 1,0),
+         nfc9_reversed = ifelse(ac3 == "1", 1,0),
+         nfc12_reversed = ifelse(ac1 == "6", 1,0),
+         nfc16_reversed = ifelse(ac2 == "3", 1,0),
+         nfc17_reversed = ifelse(ac3 == "1", 1,0),
+         nfc_total = (nfc1 + nfc2 + nfc3_reversed +
+                        nfc4_reversed + nfc5_reversed +
+                        nfc6 + nfc7_reversed + nfc8_reversed +
+                        nfc9_reversed + nfc10 + nfc11 +
+                        nfc12_reversed + nfc13 + nfc14 +
+                        nfc15 + nfc16_reversed + nfc17_reversed +
+                        nfc18
+                      )
+         )
 
-nfc<- cbind(dat$nfc1, dat$nfc2, 6-dat$nfc3, 6-dat$nfc4, 
-            6-dat$nfc5, dat$nfc6, 6-dat$nfc7, 6-dat$nfc8, 
-            6-dat$nfc9, dat$nfc10, dat$nfc11, 6-dat$nfc12, 
-            dat$nfc13, dat$nfc14, dat$nfc15, 6-dat$nfc16,
-            6-dat$nfc17, dat$nfc18 
-            )
-
-nfc<- cbind(dat$nfc1, dat$nfc2, dat$nfc3, dat$nfc4, 
-          dat$nfc5, dat$nfc6, dat$nfc7, dat$nfc8, 
-      dat$nfc9, dat$nfc10, dat$nfc11, dat$nfc12, 
-            dat$nfc13, dat$nfc14, dat$nfc15, dat$nfc16,
-           dat$nfc17, dat$nfc18 
-            )
+cronbach.alpha(nfc_total)
 ```
 
 OVERALL DATA QUALITY SCORES
-(originally: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p < .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality")
+(From the original study: "The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions,.. claim to have solved the unsolvable problem, [and claimed to qualify for a future study that they did not qualify for based on their earlier responses in the survey]. ... The overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality")
 
-```{r}
-dataquality <- cbind(ac, comprehension, honesty,
-                     na.action = "na.omit")
+```{r, Data Quality}
+dat <- dat %>%
+  mutate(dataquality = (ac_total + comprehension_total +
+                           honesty_total)
+          )
+
+colnames(dat)
 ```
 
 LOOKING AT ALL MEANS ON EACH PLATFORM
-```{r}
+```{r }
 dat %>% 
   group_by(sample) %>%
-  summarize(dataquality) # the na.rm tells R to ignore NA values
+  summarize(dataquality, na.rm = T) # the na.rm tells R to ignore NA values
 ```
 
 COMPARING DATA QUALITY ACROSS THE THREE GROUPS
-```{r}
-# reshape the data so there is just one column representing the different platforms
-dat_long <- dat %>% pivot_longer(cols=-c("sample", "dataquality"), # this tells it to transform all columns *except* these ones
-                             names_to='sample', 
-                             values_to='dataquality',
-                             na.rm = T)
-
-
+```{r, Data Quality Across Platforms}
 # Compute one-way ANOVA
 singleANOVA <- aov(dataquality ~ sample, data = dat)
 # Summary of one-way ANOVA
@@ -356,8 +369,12 @@ summary(singleANOVA)
 
 ### Summary of Replication Attempt
 
--> Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+-> a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
 
 ### Commentary
 
--> dd open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+-> add commentary reflecting about:
+a) insights from follow-up exploratory analysis
+b) assessment of the meaning of the replication (or not) 
+- e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result
+c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.

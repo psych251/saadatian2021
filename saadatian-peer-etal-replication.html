@@ -11,7 +11,7 @@
 
 <meta name="author" content="Kimia Saadatian (kimia@stanford.edu)" />
 
-<meta name="date" content="2021-11-27" />
+<meta name="date" content="2021-11-29" />
 
 <title>Replication of ‘Data quality of platforms and panels for online behavioral research’ by Peer et al. (2021, Behavior Research Methods)</title>
 
@@ -249,21 +249,22 @@ div.tocify {
 
 <h1 class="title toc-ignore">Replication of ‘Data quality of platforms and panels for online behavioral research’ by Peer et al. (2021, Behavior Research Methods)</h1>
 <h4 class="author">Kimia Saadatian (<a href="mailto:kimia@stanford.edu" class="email">kimia@stanford.edu</a>)</h4>
-<h4 class="date">November 27, 2021</h4>
+<h4 class="date">November 29, 2021</h4>
 
 </div>
 
 
-<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <div id="justification-for-choice-of-study" class="section level3">
 <h3>Justification for choice of study</h3>
-<p>I will be replicating a study by Peer et al. (2021), which compared data quality (attention, comprehension, reliability and honesty) between multiple sites used for online participant recruitment: Amazon MTurk, CloudResearch (formerly TurkPrime) and Prolific.</p>
+<p>I am replicating a recent study by Peer et al. (March, 2021), in which they compared quality of data gathered from the most popular sites used for online participant recruitment — Amazon MTurk, CloudResearch (formerly TurkPrime), and Prolific. Peer et al. (2021) found “higher data quality for Prolific and CloudResearch compared to MTurk (the differences between Prolific and MTurk and between CR and MTurk were significant (p &lt; .001), but the difference between CR and Prolific was not (p = 0.91)).”</p>
+<p>In response, associates of the site CloudResearch, Litman et al. (2021, SSRN), attempted to replicate Peer et al.’s (2021) findings and found “undisclosed methodological decisions that would limit the inferences made in [the original publication]” (Litman et al., 2021). The team from CloudResearch were specifically concerned that Peer et al. (2021) “chose to turn off the recommended data quality filters and reputation qualifications, including filters that are on by default and were designed to address known data quality issues on MTurk.” Contrary to the findings from Peer et al., (2021), upon implementing what they claim are recommended and default filters on MTurk, the team at CloudResearch (Litman et al., 2021) found CloudResearch’s data quality superior to that of Prolific.</p>
+<p>I am curious to examine the data quality filters that were used in each of these studies and investigate these sites’ data quality as a relatively-objective third-party investigator.</p>
 </div>
 <div id="anticipated-challenges" class="section level3">
 <h3>Anticipated challenges</h3>
-<p>As of right now, I do not anticipate running into any challenges in replicating the results from the original study.</p>
+<p>The only challenges I anticipate at this stage is tracking and figuring out the specific automated/default, and manually-set data quality filters that each team of researchers incorporated in their data collection process.</p>
 </div>
 <div id="links" class="section level3">
 <h3>Links</h3>
@@ -278,38 +279,96 @@ div.tocify {
 <h2>Methods</h2>
 <div id="power-analysis" class="section level3">
 <h3>Power Analysis</h3>
-<p>Main analysis I am replicating is &quot;We found statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p &lt; .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9)).</p>
-<p>For a power of 0.95, I will need 43 Participants in each group. However, to get precise estimates of the differences, I will recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific), adding to a total of 300 participants.</p>
+<p>Here I aim to replicate the main finding in Study 2, where Peer et al., (2021) compare data quality across the three sites and find “statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p &lt; .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9))”.</p>
+<p>To replicate an F statistic of 129.4 with a power of 0.95, I would need a sample of 43 participants minimum from each site. However, to get precise estimates of the differences in data quality across the three sites, I recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific). Participants from these three independent samples should add up to a total of 300 participants for the study as a whole.</p>
 </div>
 <div id="planned-sample" class="section level3">
 <h3>Planned Sample</h3>
-<p>I will recruit participants on Amazon MTurk, CloudResearch, and Prolific. Participants must be U.S. residents age 18 or above. Similar to the original study, I will exclude participants who do not complete all of the study.</p>
-<p>“We recruited 500 participants from each platform (MTurk, CR, and Prolific), who reported residing in the United States, in March 2021. Participants were paid 1.5 USD on CR and MTurk and 1.1 GBP on Prolific plus a bonus of up to 0.5 USD/GBP. We applied data quality prescreening filters on all sites by restricting the study to participants with at least 95% approval rating and at least 100 previous submissions; on CR we also used the site setting to “block low data quality workers.” We excluded participants on Prolific who completed the previous study on Prolific and participants on CR who completed the previous study on CR or MTurk. However, because our study had to be posted twice on MTurk (once through our MTurk account and once through our CR account), 39 participants completed the study twice, and we removed their later submission (although they were still paid for their submissions). The final sample thus included 1461 participants who completed the study. Table 4 presents the samples. Additional demographics can be found in the Appendix.&quot;</p>
+<p>One hundred participants who are 18 years or older and ALSO current residents of the United States are recruited on Amazon MTurk, CloudResearch, and Prolific. Similar to the original study, participants are paid a $1.5 each for completing the study, which originally averaged around 9.8 minutes-long (SD = 5.2; Peer et al., 2021).</p>
+<div id="data-quality-pre-screening" class="section level4">
+<h4>Data Quality Pre-screening</h4>
+<p>The current study implements all data quality pre-screening filters that were used in the original study (Peer et al., 2021). Peer et al. (2021) describe the data quality pre-screening and exclusion criteria as:</p>
+<ol style="list-style-type: decimal">
+<li>“Restricting the study to participants with at least 95% approval rating and at least 100 previous submissions” for participants recruited from all three sites</li>
+<li>Using the site setting to “block low data quality workers” on CloudResearch</li>
+<li>Excluding Prolific participants who completed their Study 1 on Prolific</li>
+<li>Excluding participants on CloudResearch completed their Study 1 on CloudResearch or MTurk</li>
+</ol>
+<p>*Note: since they had to post the survey twice on Mturk (once through their MTurk account and once through their CR account), some participants (N = 39) completed the survey twice. Peer et al. (2021) removed those participants’ later submissions and I will be doing the same.</p>
+<p>Other necessary and recommended data quality filters mentioned by the team at CloudResearch are:</p>
+<p>In the current study, I apply the following data quality filters on all three sites: <em>Used by Peer et al. (2021)</em> 1) MTurk - only workers who have completed 100 submissions or more and 95% of those submissions are eligible 2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions are eligible &amp; the default setting is set to “block low data quality workers” 3) Prolific - only workers who have completed 100 submissions or more and 95% of those submissions are eligible.</p>
+<p><em>Used by Litman et al. (2021)</em> 4)</p>
 </div>
-<div id="materials" class="section level3">
-<h3>Materials</h3>
-<p>“1. Attention is measured using two attention-check questions. The first asks participants to answer”six&quot; and “three” to two items regardless of their actual preference (other responses are coded as failures); the second is an item within a scale worded “I currently don’t pay attention to the questions I’m being asked in the survey” (response other than “strongly disagree” is coded as a failure) 2. Comprehension is examined through the oral summaries of instructions to two tasks. The first task asks participants to identify faces in a picture, but includes an instruction to only report zero; the second includes instructions for the “Matrix task” (Mazar et al., 2008). Two raters will code the oral responses independently and blind to the origin of the participant. We will consider an answer correct if both readers agree it is correct, and will apply a third reader to any answer with splits. 3. Reliability will be measured using Cronbach’s alpha measure for the Need for Cognition scale. 4. Honesty will be measured using an online version of the Matrix task (Mazar et al., 2008) that will include two unsolvable matrices. Reporting solving any of these two problems will be coded as a dishonest response. Additionally, we will examine whether participants lie about their eligibility for a future study by asking them to indicate if they want to be invited to a study that samples participants of their own gender but whose age will be described as 5-10 years above the age participants reported in the beginning of the study.</p>
-<p>In addition we will examine drop-out rates, duration for completing the survey, overall response time and speed between sites, differences in NFC, demographics, and patterns of usage of the site (main purpose, frequency of usage, number of submissions and approval ratings, usage of other sites), and we will also ask participants to report did they complete a study similar to this study in the last months.&quot;</p>
+<div id="exclusions" class="section level4">
+<h4>Exclusions</h4>
+<p>Similar to the original study (Peer et al., 2021), I will exclude participants who do not complete all of the study.</p>
+</div>
+</div>
+<div id="measures" class="section level3">
+<h3>Measures</h3>
+<div id="attention" class="section level4">
+<h4>Attention</h4>
+<p>-&gt; <em>[ac1, ac2, ac3]</em></p>
+<p>The original scholars measure attention using one two-item explicit question and one covert question. Similar to the original study, “the first [attention check] asks participants to answer”six&quot; and “three” to two items regardless of their actual preference (other responses are coded as failures); the second is an item within a scale worded “I currently don’t pay attention to the questions I’m being asked in the survey” (response other than “strongly disagree” is coded as a failure).&quot;</p>
+</div>
+<div id="comprehension" class="section level4">
+<h4>Comprehension</h4>
+<p>-&gt; <em>[comprehension1 and comprehension2]</em></p>
+<p>Comprehension is examined via coding of participants’ written summaries of instructions to two tasks. “The first task asks participants to identify faces in a picture, but includes an instruction to only report zero; the second includes instructions for the”Matrix task&quot; (Mazar et al., 2008).&quot;In the original study, two independent, blind raters coded the participant responses. The investigators counted an answer as correct if both coders had coded it as correct, applying a third rater to responses with split votes. Due to time constraints in data coding and analysis, the PI, Kimia Saadatian, is the sole rater of open responses to comprehension items. Following this class replication project, Kimia plans to have the data coded by two blind raters independently.</p>
+</div>
+<div id="reliability" class="section level4">
+<h4>Reliability</h4>
+<p>-&gt; <em>[nfc1 to nfc18]</em></p>
+<p>Similar to the original study, reliability is measured using Cronbach’s alpha for the eighteen-item, five-point Need for Cognition scale (Cacioppo et al., 1984). The original investigators chose this scale because it has been validated and found to be highly reliable across many studies.</p>
+</div>
+<div id="honesty" class="section level4">
+<h4>Honesty</h4>
+<p>-&gt; <em>[honesty 1, honesty2, honesty3]</em></p>
+<p>Replicating the honesty measure in the original study, honesty is measured using “an online version of the Matrix task (Mazar et al., 2008) that include(s) two unsolvable matrices. Reporting solving any of these two problems will be coded as a dishonest response. Additionally, we examine whether participants lie about their eligibility for a future study by asking them to indicate if they want to be invited to a study that samples participants of their own gender but whose age will be described as 5-10 years above the age participants reported in the beginning of the study.”</p>
+</div>
+<div id="data-quality" class="section level4">
+<h4>Data Quality</h4>
+<p>-&gt; <em>[ac_total + comprehension_total + honesty_total]</em></p>
+<p>Data quality was computed by calculating composite score of data quality based on the average scores of attention, comprehension, and dishonesty.</p>
+</div>
+<div id="other-measures" class="section level4">
+<h4>Other measures</h4>
+<p><em>The below measures are not immediately relevant to the main analyses reported in this class project report.</em></p>
+<p>To replicate the original study as closely as possible, we also measure participants’ drop-out rates, response duration, overall response time and speed between sites, differences in responses to the NFC scale, demographics, and patterns of usage of the site (main purpose, frequency of usage, number of submissions and approval ratings, usage of other sites), and whether or not the participants have completed a similar study in the last months.</p>
+</div>
 </div>
 <div id="procedure" class="section level3">
 <h3>Procedure</h3>
-<p>“Participants were invited to complete a survey on individual differences in personal attitudes, opinions, and behaviors. All participants began the survey by answering demographic questions, followed by the data quality measures described below. Participants finished the survey by answering questions related to their usage of the online platform including how often they use the site, for what purposes, how much they earn in an average week, their percent of approved submissions (responses that participants submit and are approved by the researcher), and how often (if at all) they use other sites.”</p>
-<p>“We will apply data quality filters on all three sites in the following scheme: 1) MTurk - only workers who have completed 100 submissions or more and 95% of those submissions were approved. 2) CloudResearch - only workers who have completed 100 submissions or more and 95% of those submissions were approved + the default setting on CloudResearch of”block low data quality workers&quot;</p>
-<p>I will be replicating their study 2, which originally averaged around 9.8 minutes long (SD = 5.2). Participants will be paid $1.50 to participate in this ~10 minutes-long survey.</p>
+<p>Mimicking the original survey introduction (Peer et al., 2021), the description of the currect study states : “You are invited to complete a survey on individual differences in personal attitudes, opinions, and behaviors.”</p>
+<p>I use the original .QSF file for the survey content, which begins with demographic questions, followed by the data quality measures described above.</p>
+<p>Participants are prompted with questions related to their usage of the online platform (e.g., how often they use the site, why they use it, how much they earn on average, their percent of approved submissions (responses that participants submit and are approved by the researcher), and how often (if at all) they use other sites) before finishing the survey and receiving their online payment.</p>
+<div id="deviations-from-the-original-study" class="section level4">
+<h4>Deviations from the Original Study</h4>
+<p>: 1) not forced responses 2) original excludes those who dont complete the entire study but thats not reasonable so i probably wont</p>
+</div>
 </div>
 <div id="analysis-plan" class="section level3">
 <h3>Analysis Plan</h3>
-<p>I plan to follow the same analyses that were conducted in the original study.</p>
+<p>The current study utilizes the same analyses that were conducted in the original study by Peer et al. (2021).</p>
 <p>The main analysis I am replicating is from study 2, where Peer et al. (2021) found higher data quality scores for data obtained from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p &lt; .001).</p>
-<p>In order to compute the overall data quality score, the original authors “used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty. They also computed average scores for (across the items per aspect) and compared them between sites using ANOVA and regression analyses. They tested for differences between reliability coefficients using Hakistan &amp; Whalen (1976) method. Lastly, they computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty) and compare them between sites using ANOVA and regression.”</p>
-<p>The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6) Overall data quality composite scores ranked from highest to lowest were: Prolific (M = 5.87, SD = 1.0) CR ( M = 5.78, SD = 1.1) MTurk (M = 4.55, SD = 1.9)</p>
-<p>They found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p &lt; .001</p>
-<p>Post hoc tests with Bonferroni correction:</p>
-<p>differences between Prolific and MTurk p &lt; .001 differences between CR and MTurk p &lt; .001 difference between CR and Prolific p = 0.91.</p>
+<p>In order to compute the overall data quality score, the original authors:</p>
+<p><em>Relevant for current EXPLORATORY analyses:</em></p>
+<ul>
+<li>&quot;Used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty</li>
+<li>Computed average scores for (across the items per aspect)<br />
+</li>
+<li>Compared them between sites using ANOVA and regression analyses.</li>
+<li>Tested for differences between reliability coefficients using Hakistan &amp; Whalen (1976) method&quot;</li>
+</ul>
+<p><em>Relevant for current CONFIRMATORY analyses:</em></p>
+<ul>
+<li>&quot;Computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty)</li>
+<li>Compare composite score of data quality between sites using ANOVA and regression.&quot;</li>
+</ul>
 </div>
 <div id="differences-from-original-study" class="section level3">
 <h3>Differences from Original Study</h3>
-<p>I do not anticipate any deviations from the original analysis plan at this stage.</p>
+<p>I do not anticipate any deviations from the original <em>analysis plan</em> at this stage.</p>
 </div>
 <div id="methods-addendum-post-data-collection" class="section level3">
 <h3>Methods Addendum (Post Data Collection)</h3>
@@ -323,25 +382,26 @@ div.tocify {
 </div>
 <div id="results" class="section level2">
 <h2>Results</h2>
+<div id="results-from-peer-et-al.-2021" class="section level3">
+<h3>Results from Peer et al. (2021)</h3>
+<p>The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6). Overall data quality composite scores ranked from highest to lowest were: 1) Prolific (M = 5.87, SD = 1.0) 2) CR ( M = 5.78, SD = 1.1) 3) MTurk (M = 4.55, SD = 1.9)</p>
+<p>Peer et al. (2021) found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p &lt; .001.</p>
+<p>Post hoc tests with Bonferroni correction showed: - differences between Prolific and MTurk p &lt; .001 - differences between CR and MTurk p &lt; .001 - difference between CR and Prolific p = 0.91.</p>
+</div>
 <div id="data-preparation" class="section level3">
 <h3>Data preparation</h3>
 <p>Data preparation following the analysis plan.</p>
 <pre class="r"><code>###Data Preparation
 ##### Starting a Script #####
-
   # Clear environment
     rm(list=ls())
-
   # Checking working directory
     getwd()</code></pre>
 <pre><code>## [1] &quot;/Users/kimiasaadatian/Desktop/ExpPsych/saadatian2021&quot;</code></pre>
 <pre class="r"><code>  #### Loading in data ####
-    
-    # Load csv
-      dat &lt;- read.csv(&quot;pilotB-replication.csv&quot;,
+      dat &lt;- read.csv(&quot;pilotD_replication.csv&quot;,
                        na.strings=&quot;NA&quot;, strip.white=TRUE)
-
-####Load Relevant Libraries and Functions
+  ### Load Relevant Libraries and Functions
     library(tidyverse)</code></pre>
 <pre><code>## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──</code></pre>
 <pre><code>## ✓ ggplot2 3.3.5     ✓ purrr   0.3.4
@@ -363,126 +423,27 @@ div.tocify {
 ## 
 ##     some</code></pre>
 <pre class="r"><code>    library(ggplot2)
-
-##### Looking at your data #####
-      
+    library(ltm)</code></pre>
+<pre><code>## Loading required package: MASS</code></pre>
+<pre><code>## 
+## Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<pre><code>## Loading required package: msm</code></pre>
+<pre><code>## Loading required package: polycor</code></pre>
+<pre class="r"><code>##### Looking at your data #####
   #### Identifying problems ####
-      
     # Finding the number of duplicate cases
       # WARNING: These do not include the first instance of the duplicated value.
       length(dat$id) - length(unique(dat$id))</code></pre>
-<pre><code>## [1] 1</code></pre>
+<pre><code>## [1] 6</code></pre>
 <pre class="r"><code>    # Finding rows of duplicate cases. 
       # WARNING: These do not include the first instance of the duplicated value.
       which(duplicated(dat$column))</code></pre>
 <pre><code>## integer(0)</code></pre>
-<pre class="r"><code>  #### Looking at your whole dataset ####
-      
-      # Get names, data types, and first 10 data points of every column 
-        str(dat)</code></pre>
-<pre><code>## &#39;data.frame&#39;:    5 obs. of  118 variables:
-##  $ StartDate                     : chr  &quot;Start Date&quot; &quot;{\&quot;ImportId\&quot;:\&quot;startDate\&quot;,\&quot;timeZone\&quot;:\&quot;America/Denver\&quot;}&quot; &quot;2021-11-11 12:49:38&quot; &quot;2021-11-21 01:59:01&quot; ...
-##  $ EndDate                       : chr  &quot;End Date&quot; &quot;{\&quot;ImportId\&quot;:\&quot;endDate\&quot;,\&quot;timeZone\&quot;:\&quot;America/Denver\&quot;}&quot; &quot;2021-11-11 13:34:12&quot; &quot;2021-11-21 02:03:25&quot; ...
-##  $ Status                        : chr  &quot;Response Type&quot; &quot;{\&quot;ImportId\&quot;:\&quot;status\&quot;}&quot; &quot;1&quot; &quot;1&quot; ...
-##  $ IPAddress                     : chr  &quot;IP Address&quot; &quot;{\&quot;ImportId\&quot;:\&quot;ipAddress\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ Progress                      : chr  &quot;Progress&quot; &quot;{\&quot;ImportId\&quot;:\&quot;progress\&quot;}&quot; &quot;100&quot; &quot;100&quot; ...
-##  $ Duration..in.seconds.         : chr  &quot;Duration (in seconds)&quot; &quot;{\&quot;ImportId\&quot;:\&quot;duration\&quot;}&quot; &quot;2674&quot; &quot;263&quot; ...
-##  $ Finished                      : chr  &quot;Finished&quot; &quot;{\&quot;ImportId\&quot;:\&quot;finished\&quot;}&quot; &quot;1&quot; &quot;1&quot; ...
-##  $ RecordedDate                  : chr  &quot;Recorded Date&quot; &quot;{\&quot;ImportId\&quot;:\&quot;recordedDate\&quot;,\&quot;timeZone\&quot;:\&quot;America/Denver\&quot;}&quot; &quot;2021-11-11 13:34:14&quot; &quot;2021-11-21 02:03:26&quot; ...
-##  $ ResponseId                    : chr  &quot;Response ID&quot; &quot;{\&quot;ImportId\&quot;:\&quot;_recordId\&quot;}&quot; &quot;R_1LHzGg3drfb3Es9&quot; &quot;R_dp5vx4YeLQe4IUN&quot; ...
-##  $ RecipientLastName             : chr  &quot;Recipient Last Name&quot; &quot;{\&quot;ImportId\&quot;:\&quot;recipientLastName\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ RecipientFirstName            : chr  &quot;Recipient First Name&quot; &quot;{\&quot;ImportId\&quot;:\&quot;recipientFirstName\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ RecipientEmail                : chr  &quot;Recipient Email&quot; &quot;{\&quot;ImportId\&quot;:\&quot;recipientEmail\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ ExternalReference             : chr  &quot;External Data Reference&quot; &quot;{\&quot;ImportId\&quot;:\&quot;externalDataReference\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ LocationLatitude              : chr  &quot;Location Latitude&quot; &quot;{\&quot;ImportId\&quot;:\&quot;locationLatitude\&quot;}&quot; &quot;37.4651031494140625&quot; &quot;37.4405059814453125&quot; ...
-##  $ LocationLongitude             : chr  &quot;Location Longitude&quot; &quot;{\&quot;ImportId\&quot;:\&quot;locationLongitude\&quot;}&quot; &quot;-122.14300537109375&quot; &quot;-122.147796630859375&quot; ...
-##  $ DistributionChannel           : chr  &quot;Distribution Channel&quot; &quot;{\&quot;ImportId\&quot;:\&quot;distributionChannel\&quot;}&quot; &quot;preview&quot; &quot;preview&quot; ...
-##  $ UserLanguage                  : chr  &quot;User Language&quot; &quot;{\&quot;ImportId\&quot;:\&quot;userLanguage\&quot;}&quot; &quot;EN&quot; &quot;EN&quot; ...
-##  $ Q_BallotBoxStuffing           : chr  &quot;Q_BallotBoxStuffing&quot; &quot;{\&quot;ImportId\&quot;:\&quot;Q_BallotBoxStuffing\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ Q1.2_Browser                  : chr  &quot;Browser Meta Info - Browser&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID129_BROWSER\&quot;}&quot; &quot;Firefox&quot; &quot;Chrome&quot; ...
-##  $ Q1.2_Version                  : chr  &quot;Browser Meta Info - Version&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID129_VERSION\&quot;}&quot; &quot;94.0&quot; &quot;95.0.4638.69&quot; ...
-##  $ Q1.2_Operating.System         : chr  &quot;Browser Meta Info - Operating System&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID129_OS\&quot;}&quot; &quot;Macintosh&quot; &quot;Macintosh&quot; ...
-##  $ Q1.2_Resolution               : chr  &quot;Browser Meta Info - Resolution&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID129_RESOLUTION\&quot;}&quot; &quot;1440x900&quot; &quot;1440x900&quot; ...
-##  $ gender                        : chr  &quot;What is your gender? - Selected Choice&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID10\&quot;}&quot; &quot;2&quot; &quot;2&quot; ...
-##  $ gender_3_TEXT                 : chr  &quot;What is your gender? - Other - Text&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID10_3_TEXT\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ age                           : chr  &quot;How old are you?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID11\&quot;}&quot; &quot;28&quot; &quot;24&quot; ...
-##  $ ethnicity                     : chr  &quot;What is your ethnicity? Please select all that apply. - Selected Choice&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID81\&quot;}&quot; &quot;5&quot; &quot;7&quot; ...
-##  $ ethnicity_5_TEXT              : chr  &quot;What is your ethnicity? Please select all that apply. - Other - Text&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID81_5_TEXT\&quot;}&quot; &quot;Asian/White&quot; &quot;&quot; ...
-##  $ education                     : chr  &quot;What is the highest level of education that you have completed? - Selected Choice&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID12\&quot;}&quot; &quot;6&quot; &quot;5&quot; ...
-##  $ education_9_TEXT              : chr  &quot;What is the highest level of education that you have completed? - Other - Text&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID12_9_TEXT\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ income                        : chr  &quot;What is your annual income?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID13\&quot;}&quot; &quot;3&quot; &quot;2&quot; ...
-##  $ country                       : chr  &quot;In which country do you currently live?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID32\&quot;}&quot; &quot;189&quot; &quot;189&quot; ...
-##  $ firstac1                      : chr  &quot;I would prefer to work at a job that pays higher rather than one that&#39;s closer to me and pays less&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID3\&quot;}&quot; &quot;6&quot; &quot;5&quot; ...
-##  $ firstac2                      : chr  &quot;I would prefer to live closer to my family even if it means I&#39;d have less employment opportunities&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID4\&quot;}&quot; &quot;3&quot; &quot;3&quot; ...
-##  $ Q14_1                         : chr  &quot;NFC - I would prefer complex to simple problems.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_1\&quot;}&quot; &quot;2&quot; &quot;1&quot; ...
-##  $ Q14_2                         : chr  &quot;NFC - I like to have the responsibility of handling a situation that requires a lot of thinking.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_2\&quot;}&quot; &quot;1&quot; &quot;2&quot; ...
-##  $ Q14_3                         : chr  &quot;NFC - Thinking is not my idea of fun&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_3\&quot;}&quot; &quot;4&quot; &quot;2&quot; ...
-##  $ Q14_4                         : chr  &quot;NFC - I would rather do something that requires little thought than something that is sure to challenge my thinking abilities&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_4\&quot;}&quot; &quot;4&quot; &quot;2&quot; ...
-##  $ Q14_5                         : chr  &quot;NFC - I try to anticipate and avoid situations where there is a likely chance I will have to think in depth about something.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_5\&quot;}&quot; &quot;3&quot; &quot;3&quot; ...
-##  $ Q14_6                         : chr  &quot;NFC - I find satisfaction in deliberating hard and for long hours.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_6\&quot;}&quot; &quot;2&quot; &quot;2&quot; ...
-##  $ Q14_7                         : chr  &quot;NFC - I only think as hard as I have to&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_7\&quot;}&quot; &quot;3&quot; &quot;1&quot; ...
-##  $ Q14_8                         : chr  &quot;NFC - I prefer to think about small, daily projects to long-term ones&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_8\&quot;}&quot; &quot;4&quot; &quot;1&quot; ...
-##  $ Q14_9                         : chr  &quot;NFC - I like tasks that require little thought once I&#39;ve learned them&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_9\&quot;}&quot; &quot;4&quot; &quot;1&quot; ...
-##  $ Q14_10                        : chr  &quot;NFC - The idea of relying on thought to make my way to the top appeals to me.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_10\&quot;}&quot; &quot;3&quot; &quot;1&quot; ...
-##  $ Q14_11                        : chr  &quot;NFC - I really enjoy a task that involves coming up with new solutions to problems.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_11\&quot;}&quot; &quot;4&quot; &quot;2&quot; ...
-##  $ Q14_19                        : chr  &quot;NFC - I currently don&#39;t pay attention to the questions I&#39;m being asked in the survey&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_19\&quot;}&quot; &quot;1&quot; &quot;3&quot; ...
-##  $ Q14_12                        : chr  &quot;NFC - Learning new ways to think doesn&#39;t excite me very much&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_12\&quot;}&quot; &quot;3&quot; &quot;4&quot; ...
-##  $ Q14_13                        : chr  &quot;NFC - I prefer my life to be filled with puzzles that I must solve.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_13\&quot;}&quot; &quot;2&quot; &quot;5&quot; ...
-##  $ Q14_14                        : chr  &quot;NFC - The notion of thinking abstractly is appealing to me.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_14\&quot;}&quot; &quot;4&quot; &quot;5&quot; ...
-##  $ Q14_15                        : chr  &quot;NFC - I would prefer a task that is intellectual, difficult, and important to one that is somewhat important bu&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;QID7_15\&quot;}&quot; &quot;3&quot; &quot;4&quot; ...
-##  $ Q14_16                        : chr  &quot;NFC - I feel relief rather than satisfaction after completing a task that required a lot of mental effort&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_16\&quot;}&quot; &quot;4&quot; &quot;5&quot; ...
-##  $ Q14_17                        : chr  &quot;NFC - It&#39;s enough for me that something gets the job done; I don&#39;t care how or why it works&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_17\&quot;}&quot; &quot;2&quot; &quot;5&quot; ...
-##  $ Q14_18                        : chr  &quot;NFC - I usually end up deliberating about issues even when they do not affect me personally.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID7_18\&quot;}&quot; &quot;2&quot; &quot;5&quot; ...
-##  $ secondacqtime_First.Click     : chr  &quot;Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID125_FIRST_CLICK\&quot;}&quot; &quot;10.786&quot; &quot;0.677&quot; ...
-##  $ secondacqtime_Last.Click      : chr  &quot;Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID125_LAST_CLICK\&quot;}&quot; &quot;114.028&quot; &quot;69.669&quot; ...
-##  $ secondacqtime_Page.Submit     : chr  &quot;Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID125_PAGE_SUBMIT\&quot;}&quot; &quot;114.901&quot; &quot;70.994&quot; ...
-##  $ secondacqtime_Click.Count     : chr  &quot;Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID125_CLICK_COUNT\&quot;}&quot; &quot;27&quot; &quot;44&quot; ...
-##  $ firstcomprehension1           : chr  &quot;The next question measures your perceptual abilities. \n\nWe will show you an image with several people in it. &quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;QID84_TEXT\&quot;}&quot; &quot;Basically ignore the first part and say zero persons regardless of how many people I see.&quot; &quot;jnkn&quot; ...
-##  $ comprehensiontime_First.Click : chr  &quot;Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID128_FIRST_CLICK\&quot;}&quot; &quot;29.964&quot; &quot;2.263&quot; ...
-##  $ comprehensiontime_Last.Click  : chr  &quot;Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID128_LAST_CLICK\&quot;}&quot; &quot;29.964&quot; &quot;2.263&quot; ...
-##  $ comprehensiontime_Page.Submit : chr  &quot;Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID128_PAGE_SUBMIT\&quot;}&quot; &quot;59.447&quot; &quot;4.887&quot; ...
-##  $ comprehensiontime_Click.Count : chr  &quot;Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID128_CLICK_COUNT\&quot;}&quot; &quot;1&quot; &quot;1&quot; ...
-##  $ comprehensiontime2_First.Click: chr  &quot;Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID87_FIRST_CLICK\&quot;}&quot; &quot;6.258&quot; &quot;0&quot; ...
-##  $ comprehensiontime2_Last.Click : chr  &quot;Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID87_LAST_CLICK\&quot;}&quot; &quot;7.527&quot; &quot;0&quot; ...
-##  $ comprehensiontime2_Page.Submit: chr  &quot;Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID87_PAGE_SUBMIT\&quot;}&quot; &quot;8.305&quot; &quot;5.162&quot; ...
-##  $ comprehensiontime2_Click.Count: chr  &quot;Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID87_CLICK_COUNT\&quot;}&quot; &quot;2&quot; &quot;0&quot; ...
-##  $ firstcomprehension2           : chr  &quot;How many persons can you see in the picture? Answer as quickly as possible.&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID86\&quot;}&quot; &quot;1&quot; &quot;11&quot; ...
-##  $ secondcomprehension1          : chr  &quot;Instructions for the next task - please read carefully\n\n\n\nYou will be asked to solve multiple short problem&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;QID131_TEXT\&quot;}&quot; &quot;Find 2 numbers that add up to exactly 10.&quot; &quot;kjn&quot; ...
-##  $ X1_matrixtime_First.Click     : chr  &quot;Timing - 0.47 - Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;1_QID133_FIRST_CLICK\&quot;}&quot; &quot;0&quot; &quot;10.427&quot; ...
-##  $ X1_matrixtime_Last.Click      : chr  &quot;Timing - 0.47 - Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;1_QID133_LAST_CLICK\&quot;}&quot; &quot;0&quot; &quot;10.427&quot; ...
-##  $ X1_matrixtime_Page.Submit     : chr  &quot;Timing - 0.47 - Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;1_QID133_PAGE_SUBMIT\&quot;}&quot; &quot;21.007&quot; &quot;13.568&quot; ...
-##  $ X1_matrixtime_Click.Count     : chr  &quot;Timing - 0.47 - Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;1_QID133_CLICK_COUNT\&quot;}&quot; &quot;0&quot; &quot;1&quot; ...
-##  $ X1_secondcomprehension2       : chr  &quot;0.47 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Fie&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;1_QID134\&quot;}&quot; &quot;0&quot; &quot;1&quot; ...
-##  $ X2_matrixtime_First.Click     : chr  &quot;Timing - 1.46 - Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;2_QID133_FIRST_CLICK\&quot;}&quot; &quot;0&quot; &quot;5.178&quot; ...
-##  $ X2_matrixtime_Last.Click      : chr  &quot;Timing - 1.46 - Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;2_QID133_LAST_CLICK\&quot;}&quot; &quot;0&quot; &quot;5.178&quot; ...
-##  $ X2_matrixtime_Page.Submit     : chr  &quot;Timing - 1.46 - Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;2_QID133_PAGE_SUBMIT\&quot;}&quot; &quot;21.107&quot; &quot;6.353&quot; ...
-##  $ X2_matrixtime_Click.Count     : chr  &quot;Timing - 1.46 - Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;2_QID133_CLICK_COUNT\&quot;}&quot; &quot;0&quot; &quot;1&quot; ...
-##  $ X2_secondcomprehension2       : chr  &quot;1.46 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Fie&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;2_QID134\&quot;}&quot; &quot;0&quot; &quot;1&quot; ...
-##  $ X3_matrixtime_First.Click     : chr  &quot;Timing - 0.06 - Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;3_QID133_FIRST_CLICK\&quot;}&quot; &quot;0&quot; &quot;0&quot; ...
-##  $ X3_matrixtime_Last.Click      : chr  &quot;Timing - 0.06 - Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;3_QID133_LAST_CLICK\&quot;}&quot; &quot;0&quot; &quot;0&quot; ...
-##  $ X3_matrixtime_Page.Submit     : chr  &quot;Timing - 0.06 - Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;3_QID133_PAGE_SUBMIT\&quot;}&quot; &quot;21.007&quot; &quot;4.201&quot; ...
-##  $ X3_matrixtime_Click.Count     : chr  &quot;Timing - 0.06 - Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;3_QID133_CLICK_COUNT\&quot;}&quot; &quot;0&quot; &quot;0&quot; ...
-##  $ X3_secondcomprehension2       : chr  &quot;0.06 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Fie&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;3_QID134\&quot;}&quot; &quot;0&quot; &quot;0&quot; ...
-##  $ X4_matrixtime_First.Click     : chr  &quot;Timing - 0.14 - Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;4_QID133_FIRST_CLICK\&quot;}&quot; &quot;0&quot; &quot;3.677&quot; ...
-##  $ X4_matrixtime_Last.Click      : chr  &quot;Timing - 0.14 - Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;4_QID133_LAST_CLICK\&quot;}&quot; &quot;0&quot; &quot;4.711&quot; ...
-##  $ X4_matrixtime_Page.Submit     : chr  &quot;Timing - 0.14 - Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;4_QID133_PAGE_SUBMIT\&quot;}&quot; &quot;21.008&quot; &quot;11.748&quot; ...
-##  $ X4_matrixtime_Click.Count     : chr  &quot;Timing - 0.14 - Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;4_QID133_CLICK_COUNT\&quot;}&quot; &quot;0&quot; &quot;2&quot; ...
-##  $ X4_secondcomprehension2       : chr  &quot;0.14 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Fie&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;4_QID134\&quot;}&quot; &quot;0&quot; &quot;0&quot; ...
-##  $ X5_matrixtime_First.Click     : chr  &quot;Timing - 2.01 - Timing - First Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;5_QID133_FIRST_CLICK\&quot;}&quot; &quot;0&quot; &quot;7.6&quot; ...
-##  $ X5_matrixtime_Last.Click      : chr  &quot;Timing - 2.01 - Timing - Last Click&quot; &quot;{\&quot;ImportId\&quot;:\&quot;5_QID133_LAST_CLICK\&quot;}&quot; &quot;0&quot; &quot;8.07&quot; ...
-##  $ X5_matrixtime_Page.Submit     : chr  &quot;Timing - 2.01 - Timing - Page Submit&quot; &quot;{\&quot;ImportId\&quot;:\&quot;5_QID133_PAGE_SUBMIT\&quot;}&quot; &quot;3.357&quot; &quot;21.007&quot; ...
-##  $ X5_matrixtime_Click.Count     : chr  &quot;Timing - 2.01 - Timing - Click Count&quot; &quot;{\&quot;ImportId\&quot;:\&quot;5_QID133_CLICK_COUNT\&quot;}&quot; &quot;0&quot; &quot;2&quot; ...
-##  $ X5_secondcomprehension2       : chr  &quot;2.01 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Fie&quot;| __truncated__ &quot;{\&quot;ImportId\&quot;:\&quot;5_QID134\&quot;}&quot; &quot;0&quot; &quot;1&quot; ...
-##  $ usage1                        : chr  &quot;How often do you use [Field-site]?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID28\&quot;}&quot; &quot;1&quot; &quot;3&quot; ...
-##  $ usage2                        : chr  &quot;Why do you use [Field-site]?\n(check all that apply) - Selected Choice&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID29\&quot;}&quot; &quot;3&quot; &quot;1&quot; ...
-##  $ usage2_4_TEXT                 : chr  &quot;Why do you use [Field-site]?\n(check all that apply) - Other - Text&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID29_4_TEXT\&quot;}&quot; &quot;&quot; &quot;&quot; ...
-##  $ usage3                        : chr  &quot;How much, on average, do you earn in a week using [Field-site]?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID71_TEXT\&quot;}&quot; &quot;none&quot; &quot;mn&quot; ...
-##  $ usage4                        : chr  &quot;What percent of your submissions have been approved so far on [Field-site]?&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID83_TEXT\&quot;}&quot; &quot;none&quot; &quot;mnk&quot; ...
-##  $ Q9.5_8                        : chr  &quot;Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Amazon MTurk&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID69_8\&quot;}&quot; &quot;1&quot; &quot;1&quot; ...
-##  $ Q9.5_9                        : chr  &quot;Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Prolific&quot; &quot;{\&quot;ImportId\&quot;:\&quot;QID69_9\&quot;}&quot; &quot;1&quot; &quot;3&quot; ...
-##   [list output truncated]</code></pre>
-<pre class="r"><code>      # Get a list of column names of your data (in order)
-        colnames(dat)</code></pre>
+<pre class="r"><code>  #### Looking at the dataset ####
+        colnames(dat) # list of column names in order</code></pre>
 <pre><code>##   [1] &quot;StartDate&quot;                      &quot;EndDate&quot;                       
 ##   [3] &quot;Status&quot;                         &quot;IPAddress&quot;                     
 ##   [5] &quot;Progress&quot;                       &quot;Duration..in.seconds.&quot;         
@@ -498,564 +459,247 @@ div.tocify {
 ##  [25] &quot;age&quot;                            &quot;ethnicity&quot;                     
 ##  [27] &quot;ethnicity_5_TEXT&quot;               &quot;education&quot;                     
 ##  [29] &quot;education_9_TEXT&quot;               &quot;income&quot;                        
-##  [31] &quot;country&quot;                        &quot;firstac1&quot;                      
-##  [33] &quot;firstac2&quot;                       &quot;Q14_1&quot;                         
-##  [35] &quot;Q14_2&quot;                          &quot;Q14_3&quot;                         
-##  [37] &quot;Q14_4&quot;                          &quot;Q14_5&quot;                         
-##  [39] &quot;Q14_6&quot;                          &quot;Q14_7&quot;                         
-##  [41] &quot;Q14_8&quot;                          &quot;Q14_9&quot;                         
-##  [43] &quot;Q14_10&quot;                         &quot;Q14_11&quot;                        
-##  [45] &quot;Q14_19&quot;                         &quot;Q14_12&quot;                        
-##  [47] &quot;Q14_13&quot;                         &quot;Q14_14&quot;                        
-##  [49] &quot;Q14_15&quot;                         &quot;Q14_16&quot;                        
-##  [51] &quot;Q14_17&quot;                         &quot;Q14_18&quot;                        
-##  [53] &quot;secondacqtime_First.Click&quot;      &quot;secondacqtime_Last.Click&quot;      
-##  [55] &quot;secondacqtime_Page.Submit&quot;      &quot;secondacqtime_Click.Count&quot;     
-##  [57] &quot;firstcomprehension1&quot;            &quot;comprehensiontime_First.Click&quot; 
-##  [59] &quot;comprehensiontime_Last.Click&quot;   &quot;comprehensiontime_Page.Submit&quot; 
-##  [61] &quot;comprehensiontime_Click.Count&quot;  &quot;comprehensiontime2_First.Click&quot;
+##  [31] &quot;country&quot;                        &quot;ac1&quot;                           
+##  [33] &quot;ac2&quot;                            &quot;nfc1&quot;                          
+##  [35] &quot;nfc2&quot;                           &quot;nfc3&quot;                          
+##  [37] &quot;nfc4&quot;                           &quot;nfc5&quot;                          
+##  [39] &quot;nfc6&quot;                           &quot;nfc7&quot;                          
+##  [41] &quot;nfc8&quot;                           &quot;nfc9&quot;                          
+##  [43] &quot;nfc10&quot;                          &quot;nfc11&quot;                         
+##  [45] &quot;ac3&quot;                            &quot;nfc12&quot;                         
+##  [47] &quot;nfc13&quot;                          &quot;nfc14&quot;                         
+##  [49] &quot;nfc15&quot;                          &quot;nfc16&quot;                         
+##  [51] &quot;nfc17&quot;                          &quot;nfc18&quot;                         
+##  [53] &quot;nfctime_First.Click&quot;            &quot;nfctime_Last.Click&quot;            
+##  [55] &quot;nfctime_Page.Submit&quot;            &quot;nfctime_Click.Count&quot;           
+##  [57] &quot;comprehension1&quot;                 &quot;comprehensiontime1_First.Click&quot;
+##  [59] &quot;comprehensiontime1_Last.Click&quot;  &quot;comprehensiontime1_Page.Submit&quot;
+##  [61] &quot;comprehensiontime1_Click.Count&quot; &quot;comprehensiontime2_First.Click&quot;
 ##  [63] &quot;comprehensiontime2_Last.Click&quot;  &quot;comprehensiontime2_Page.Submit&quot;
-##  [65] &quot;comprehensiontime2_Click.Count&quot; &quot;firstcomprehension2&quot;           
-##  [67] &quot;secondcomprehension1&quot;           &quot;X1_matrixtime_First.Click&quot;     
+##  [65] &quot;comprehensiontime2_Click.Count&quot; &quot;comprehension2&quot;                
+##  [67] &quot;comprehension3&quot;                 &quot;X1_matrixtime_First.Click&quot;     
 ##  [69] &quot;X1_matrixtime_Last.Click&quot;       &quot;X1_matrixtime_Page.Submit&quot;     
-##  [71] &quot;X1_matrixtime_Click.Count&quot;      &quot;X1_secondcomprehension2&quot;       
+##  [71] &quot;X1_matrixtime_Click.Count&quot;      &quot;X1_honesty2&quot;                   
 ##  [73] &quot;X2_matrixtime_First.Click&quot;      &quot;X2_matrixtime_Last.Click&quot;      
 ##  [75] &quot;X2_matrixtime_Page.Submit&quot;      &quot;X2_matrixtime_Click.Count&quot;     
-##  [77] &quot;X2_secondcomprehension2&quot;        &quot;X3_matrixtime_First.Click&quot;     
+##  [77] &quot;X2_honesty2&quot;                    &quot;X3_matrixtime_First.Click&quot;     
 ##  [79] &quot;X3_matrixtime_Last.Click&quot;       &quot;X3_matrixtime_Page.Submit&quot;     
-##  [81] &quot;X3_matrixtime_Click.Count&quot;      &quot;X3_secondcomprehension2&quot;       
+##  [81] &quot;X3_matrixtime_Click.Count&quot;      &quot;X3_honesty2&quot;                   
 ##  [83] &quot;X4_matrixtime_First.Click&quot;      &quot;X4_matrixtime_Last.Click&quot;      
 ##  [85] &quot;X4_matrixtime_Page.Submit&quot;      &quot;X4_matrixtime_Click.Count&quot;     
-##  [87] &quot;X4_secondcomprehension2&quot;        &quot;X5_matrixtime_First.Click&quot;     
-##  [89] &quot;X5_matrixtime_Last.Click&quot;       &quot;X5_matrixtime_Page.Submit&quot;     
-##  [91] &quot;X5_matrixtime_Click.Count&quot;      &quot;X5_secondcomprehension2&quot;       
-##  [93] &quot;usage1&quot;                         &quot;usage2&quot;                        
-##  [95] &quot;usage2_4_TEXT&quot;                  &quot;usage3&quot;                        
-##  [97] &quot;usage4&quot;                         &quot;Q9.5_8&quot;                        
-##  [99] &quot;Q9.5_9&quot;                         &quot;Q9.5_20&quot;                       
-## [101] &quot;Q9.5_21&quot;                        &quot;Q9.5_16&quot;                       
-## [103] &quot;Q9.5_16_TEXT&quot;                   &quot;usage6&quot;                        
-## [105] &quot;usage6_3_TEXT&quot;                  &quot;honesty2&quot;                      
-## [107] &quot;honesty2_4_TEXT&quot;                &quot;id&quot;                            
-## [109] &quot;comments&quot;                       &quot;SC0&quot;                           
-## [111] &quot;PROLIFIC_PID&quot;                   &quot;workerid&quot;                      
-## [113] &quot;assignmentId&quot;                   &quot;hitId&quot;                         
-## [115] &quot;site&quot;                           &quot;age.1&quot;                         
-## [117] &quot;sign&quot;                           &quot;sample&quot;</code></pre>
-<pre class="r"><code>      # Show the first five rows of your data. 
-        head(dat)</code></pre>
-<pre><code>##                                              StartDate
-## 1                                           Start Date
-## 2 {&quot;ImportId&quot;:&quot;startDate&quot;,&quot;timeZone&quot;:&quot;America/Denver&quot;}
-## 3                                  2021-11-11 12:49:38
-## 4                                  2021-11-21 01:59:01
-## 5                                  2021-11-23 08:23:48
-##                                              EndDate                Status
-## 1                                           End Date         Response Type
-## 2 {&quot;ImportId&quot;:&quot;endDate&quot;,&quot;timeZone&quot;:&quot;America/Denver&quot;} {&quot;ImportId&quot;:&quot;status&quot;}
-## 3                                2021-11-11 13:34:12                     1
-## 4                                2021-11-21 02:03:25                     1
-## 5                                2021-11-23 08:26:02                     1
-##                  IPAddress                Progress   Duration..in.seconds.
-## 1               IP Address                Progress   Duration (in seconds)
-## 2 {&quot;ImportId&quot;:&quot;ipAddress&quot;} {&quot;ImportId&quot;:&quot;progress&quot;} {&quot;ImportId&quot;:&quot;duration&quot;}
-## 3                                              100                    2674
-## 4                                              100                     263
-## 5                                              100                     134
-##                  Finished
-## 1                Finished
-## 2 {&quot;ImportId&quot;:&quot;finished&quot;}
-## 3                       1
-## 4                       1
-## 5                       1
-##                                              RecordedDate
-## 1                                           Recorded Date
-## 2 {&quot;ImportId&quot;:&quot;recordedDate&quot;,&quot;timeZone&quot;:&quot;America/Denver&quot;}
-## 3                                     2021-11-11 13:34:14
-## 4                                     2021-11-21 02:03:26
-## 5                                     2021-11-23 08:26:03
-##                 ResponseId                RecipientLastName
-## 1              Response ID              Recipient Last Name
-## 2 {&quot;ImportId&quot;:&quot;_recordId&quot;} {&quot;ImportId&quot;:&quot;recipientLastName&quot;}
-## 3        R_1LHzGg3drfb3Es9                                 
-## 4        R_dp5vx4YeLQe4IUN                                 
-## 5        R_V4OFpPDXAjruZj3                                 
-##                  RecipientFirstName                RecipientEmail
-## 1              Recipient First Name               Recipient Email
-## 2 {&quot;ImportId&quot;:&quot;recipientFirstName&quot;} {&quot;ImportId&quot;:&quot;recipientEmail&quot;}
-## 3                                                                
-## 4                                                                
-## 5                                                                
-##                      ExternalReference                LocationLatitude
-## 1              External Data Reference               Location Latitude
-## 2 {&quot;ImportId&quot;:&quot;externalDataReference&quot;} {&quot;ImportId&quot;:&quot;locationLatitude&quot;}
-## 3                                                  37.4651031494140625
-## 4                                                  37.4405059814453125
-## 5                                                  45.4994964599609375
-##                  LocationLongitude                DistributionChannel
-## 1               Location Longitude               Distribution Channel
-## 2 {&quot;ImportId&quot;:&quot;locationLongitude&quot;} {&quot;ImportId&quot;:&quot;distributionChannel&quot;}
-## 3              -122.14300537109375                            preview
-## 4             -122.147796630859375                            preview
-## 5            -73.58480072021484375                            preview
-##                  UserLanguage                Q_BallotBoxStuffing
-## 1               User Language                Q_BallotBoxStuffing
-## 2 {&quot;ImportId&quot;:&quot;userLanguage&quot;} {&quot;ImportId&quot;:&quot;Q_BallotBoxStuffing&quot;}
-## 3                          EN                                   
-## 4                          EN                                   
-## 5                          EN                                   
-##                    Q1.2_Browser                  Q1.2_Version
-## 1   Browser Meta Info - Browser   Browser Meta Info - Version
-## 2 {&quot;ImportId&quot;:&quot;QID129_BROWSER&quot;} {&quot;ImportId&quot;:&quot;QID129_VERSION&quot;}
-## 3                       Firefox                          94.0
-## 4                        Chrome                  95.0.4638.69
-## 5                       Firefox                          94.0
-##                  Q1.2_Operating.System                  Q1.2_Resolution
-## 1 Browser Meta Info - Operating System   Browser Meta Info - Resolution
-## 2             {&quot;ImportId&quot;:&quot;QID129_OS&quot;} {&quot;ImportId&quot;:&quot;QID129_RESOLUTION&quot;}
-## 3                            Macintosh                         1440x900
-## 4                            Macintosh                         1440x900
-## 5                            Macintosh                         1440x900
-##                                   gender                       gender_3_TEXT
-## 1 What is your gender? - Selected Choice What is your gender? - Other - Text
-## 2                   {&quot;ImportId&quot;:&quot;QID10&quot;}         {&quot;ImportId&quot;:&quot;QID10_3_TEXT&quot;}
-## 3                                      2                                    
-## 4                                      2                                    
-## 5                                      2                                    
-##                    age
-## 1     How old are you?
-## 2 {&quot;ImportId&quot;:&quot;QID11&quot;}
-## 3                   28
-## 4                   24
-## 5                   28
-##                                                                 ethnicity
-## 1 What is your ethnicity? Please select all that apply. - Selected Choice
-## 2                                                    {&quot;ImportId&quot;:&quot;QID81&quot;}
-## 3                                                                       5
-## 4                                                                       7
-## 5                                                                       5
-##                                                       ethnicity_5_TEXT
-## 1 What is your ethnicity? Please select all that apply. - Other - Text
-## 2                                          {&quot;ImportId&quot;:&quot;QID81_5_TEXT&quot;}
-## 3                                                          Asian/White
-## 4                                                                     
-## 5                                                                     
-##                                                                           education
-## 1 What is the highest level of education that you have completed? - Selected Choice
-## 2                                                              {&quot;ImportId&quot;:&quot;QID12&quot;}
-## 3                                                                                 6
-## 4                                                                                 5
-## 5                                                                                 4
-##                                                                 education_9_TEXT
-## 1 What is the highest level of education that you have completed? - Other - Text
-## 2                                                    {&quot;ImportId&quot;:&quot;QID12_9_TEXT&quot;}
-## 3                                                                               
-## 4                                                                               
-## 5                                                                               
-##                        income                                 country
-## 1 What is your annual income? In which country do you currently live?
-## 2        {&quot;ImportId&quot;:&quot;QID13&quot;}                    {&quot;ImportId&quot;:&quot;QID32&quot;}
-## 3                           3                                     189
-## 4                           2                                     189
-## 5                           3                                     189
-##                                                                                             firstac1
-## 1 I would prefer to work at a job that pays higher rather than one that&#39;s closer to me and pays less
-## 2                                                                                {&quot;ImportId&quot;:&quot;QID3&quot;}
-## 3                                                                                                  6
-## 4                                                                                                  5
-## 5                                                                                                  4
-##                                                                                             firstac2
-## 1 I would prefer to live closer to my family even if it means I&#39;d have less employment opportunities
-## 2                                                                                {&quot;ImportId&quot;:&quot;QID4&quot;}
-## 3                                                                                                  3
-## 4                                                                                                  3
-## 5                                                                                                  4
-##                                              Q14_1
-## 1 NFC - I would prefer complex to simple problems.
-## 2                            {&quot;ImportId&quot;:&quot;QID7_1&quot;}
-## 3                                                2
-## 4                                                1
-## 5                                                3
-##                                                                                              Q14_2
-## 1 NFC - I like to have the responsibility of handling a situation that requires a lot of thinking.
-## 2                                                                            {&quot;ImportId&quot;:&quot;QID7_2&quot;}
-## 3                                                                                                1
-## 4                                                                                                2
-## 5                                                                                                3
-##                                  Q14_3
-## 1 NFC - Thinking is not my idea of fun
-## 2                {&quot;ImportId&quot;:&quot;QID7_3&quot;}
-## 3                                    4
-## 4                                    2
-## 5                                    3
-##                                                                                                                           Q14_4
-## 1 NFC - I would rather do something that requires little thought than something that is sure to challenge my thinking abilities
-## 2                                                                                                         {&quot;ImportId&quot;:&quot;QID7_4&quot;}
-## 3                                                                                                                             4
-## 4                                                                                                                             2
-## 5                                                                                                                             3
-##                                                                                                                          Q14_5
-## 1 NFC - I try to anticipate and avoid situations where there is a likely chance I will have to think in depth about something.
-## 2                                                                                                        {&quot;ImportId&quot;:&quot;QID7_5&quot;}
-## 3                                                                                                                            3
-## 4                                                                                                                            3
-## 5                                                                                                                            3
-##                                                                Q14_6
-## 1 NFC - I find satisfaction in deliberating hard and for long hours.
-## 2                                              {&quot;ImportId&quot;:&quot;QID7_6&quot;}
-## 3                                                                  2
-## 4                                                                  2
-## 5                                                                  3
-##                                     Q14_7
-## 1 NFC - I only think as hard as I have to
-## 2                   {&quot;ImportId&quot;:&quot;QID7_7&quot;}
-## 3                                       3
-## 4                                       1
-## 5                                       3
-##                                                                   Q14_8
-## 1 NFC - I prefer to think about small, daily projects to long-term ones
-## 2                                                 {&quot;ImportId&quot;:&quot;QID7_8&quot;}
-## 3                                                                     4
-## 4                                                                     1
-## 5                                                                     3
-##                                                                   Q14_9
-## 1 NFC - I like tasks that require little thought once I&#39;ve learned them
-## 2                                                 {&quot;ImportId&quot;:&quot;QID7_9&quot;}
-## 3                                                                     4
-## 4                                                                     1
-## 5                                                                     3
-##                                                                          Q14_10
-## 1 NFC - The idea of relying on thought to make my way to the top appeals to me.
-## 2                                                        {&quot;ImportId&quot;:&quot;QID7_10&quot;}
-## 3                                                                             3
-## 4                                                                             1
-## 5                                                                             3
-##                                                                                Q14_11
-## 1 NFC - I really enjoy a task that involves coming up with new solutions to problems.
-## 2                                                              {&quot;ImportId&quot;:&quot;QID7_11&quot;}
-## 3                                                                                   4
-## 4                                                                                   2
-## 5                                                                                   3
-##                                                                                 Q14_19
-## 1 NFC - I currently don&#39;t pay attention to the questions I&#39;m being asked in the survey
-## 2                                                               {&quot;ImportId&quot;:&quot;QID7_19&quot;}
-## 3                                                                                    1
-## 4                                                                                    3
-## 5                                                                                    3
-##                                                         Q14_12
-## 1 NFC - Learning new ways to think doesn&#39;t excite me very much
-## 2                                       {&quot;ImportId&quot;:&quot;QID7_12&quot;}
-## 3                                                            3
-## 4                                                            4
-## 5                                                            3
-##                                                                Q14_13
-## 1 NFC - I prefer my life to be filled with puzzles that I must solve.
-## 2                                              {&quot;ImportId&quot;:&quot;QID7_13&quot;}
-## 3                                                                   2
-## 4                                                                   5
-## 5                                                                   3
-##                                                        Q14_14
-## 1 NFC - The notion of thinking abstractly is appealing to me.
-## 2                                      {&quot;ImportId&quot;:&quot;QID7_14&quot;}
-## 3                                                           4
-## 4                                                           5
-## 5                                                           3
-##                                                                                                                                            Q14_15
-## 1 NFC - I would prefer a task that is intellectual, difficult, and important to one that is somewhat important but does not require much thought.
-## 2                                                                                                                          {&quot;ImportId&quot;:&quot;QID7_15&quot;}
-## 3                                                                                                                                               3
-## 4                                                                                                                                               4
-## 5                                                                                                                                               3
-##                                                                                                      Q14_16
-## 1 NFC - I feel relief rather than satisfaction after completing a task that required a lot of mental effort
-## 2                                                                                    {&quot;ImportId&quot;:&quot;QID7_16&quot;}
-## 3                                                                                                         4
-## 4                                                                                                         5
-## 5                                                                                                         3
-##                                                                                        Q14_17
-## 1 NFC - It&#39;s enough for me that something gets the job done; I don&#39;t care how or why it works
-## 2                                                                      {&quot;ImportId&quot;:&quot;QID7_17&quot;}
-## 3                                                                                           2
-## 4                                                                                           5
-## 5                                                                                           3
-##                                                                                         Q14_18
-## 1 NFC - I usually end up deliberating about issues even when they do not affect me personally.
-## 2                                                                       {&quot;ImportId&quot;:&quot;QID7_18&quot;}
-## 3                                                                                            2
-## 4                                                                                            5
-## 5                                                                                            3
-##           secondacqtime_First.Click         secondacqtime_Last.Click
-## 1              Timing - First Click              Timing - Last Click
-## 2 {&quot;ImportId&quot;:&quot;QID125_FIRST_CLICK&quot;} {&quot;ImportId&quot;:&quot;QID125_LAST_CLICK&quot;}
-## 3                            10.786                          114.028
-## 4                             0.677                           69.669
-## 5                             2.499                           11.631
-##           secondacqtime_Page.Submit         secondacqtime_Click.Count
-## 1              Timing - Page Submit              Timing - Click Count
-## 2 {&quot;ImportId&quot;:&quot;QID125_PAGE_SUBMIT&quot;} {&quot;ImportId&quot;:&quot;QID125_CLICK_COUNT&quot;}
-## 3                           114.901                                27
-## 4                            70.994                                44
-## 5                            13.557                                20
-##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        firstcomprehension1
-## 1 The next question measures your perceptual abilities. \n\nWe will show you an image with several people in it. Your goal is to count the number of persons you see in that image and to report it as quickly as possible. You will only have 20 seconds to observe the image and report your answer so please pay attention and answer carefully. \n\nAs we&#39;ve explained before, this survey is about individual differences and how different people react to different situations. Every person can be different, so we expect to get different results from different people. Please feel free to provide us with any response you personally think is appropriate, in the other parts of the survey. In this part, though, we ask that you ignore the instructions given above and when you see the image with the persons in it you must report you see zero persons in the picture, even if that is not correct. Thank you for following our instructions. \nPlease explain, briefly and in your own words, the instructions above
-## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {&quot;ImportId&quot;:&quot;QID84_TEXT&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Basically ignore the first part and say zero persons regardless of how many people I see.
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     jnkn
-## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     test
-##       comprehensiontime_First.Click     comprehensiontime_Last.Click
-## 1              Timing - First Click              Timing - Last Click
-## 2 {&quot;ImportId&quot;:&quot;QID128_FIRST_CLICK&quot;} {&quot;ImportId&quot;:&quot;QID128_LAST_CLICK&quot;}
-## 3                            29.964                           29.964
-## 4                             2.263                            2.263
-## 5                             2.787                            2.787
-##       comprehensiontime_Page.Submit     comprehensiontime_Click.Count
-## 1              Timing - Page Submit              Timing - Click Count
-## 2 {&quot;ImportId&quot;:&quot;QID128_PAGE_SUBMIT&quot;} {&quot;ImportId&quot;:&quot;QID128_CLICK_COUNT&quot;}
-## 3                            59.447                                 1
-## 4                             4.887                                 1
-## 5                             4.389                                 1
-##     comprehensiontime2_First.Click   comprehensiontime2_Last.Click
-## 1             Timing - First Click             Timing - Last Click
-## 2 {&quot;ImportId&quot;:&quot;QID87_FIRST_CLICK&quot;} {&quot;ImportId&quot;:&quot;QID87_LAST_CLICK&quot;}
-## 3                            6.258                           7.527
-## 4                                0                               0
-## 5                            1.581                             2.8
-##     comprehensiontime2_Page.Submit   comprehensiontime2_Click.Count
-## 1             Timing - Page Submit             Timing - Click Count
-## 2 {&quot;ImportId&quot;:&quot;QID87_PAGE_SUBMIT&quot;} {&quot;ImportId&quot;:&quot;QID87_CLICK_COUNT&quot;}
-## 3                            8.305                                2
-## 4                            5.162                                0
-## 5                            4.072                                2
-##                                                           firstcomprehension2
-## 1 How many persons can you see in the picture? Answer as quickly as possible.
-## 2                                                        {&quot;ImportId&quot;:&quot;QID86&quot;}
-## 3                                                                           1
-## 4                                                                          11
-## 5                                                                           1
-##                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  secondcomprehension1
-## 1 Instructions for the next task - please read carefully\n\n\n\nYou will be asked to solve multiple short problems involving simple calculations.\n\nSpecifically, your task will be to look at a table that consists of several numbers and to find the two numbers that, when added up, result in exactly 10.\n\n \n\n\n\t\n\t\t\n\t\t\t1.69\n\t\t\t1.82\n\t\t\t2.91\n\t\t\n\t\t\n\t\t\t4.67\n\t\t\t4.81\n\t\t\t3.05\n\t\t\n\t\t\n\t\t\t5.82\n\t\t\t5.06\n\t\t\t4.28\n\t\t\n\t\t\n\t\t\t6.36\n\t\t\t5.19\n\t\t\t4.57\n\t\t\n\t\n\n\n\n\n\nFor example, in the above table, the numbers 4.81 and 5.19 are the only ones that add up to exactly 10.\n\nIn each problem, there are two numbers that add up to exactly 10. Your task is to find, in less than 20 seconds, the two numbers that add up to exactly 10. \n\n\n\nYou will be asked to solve several such problems one after the other. For each problem you report as solved you will earn 0.1[Field-sign] in bonus. \n\n\n\nTo make sure you understand the instructions, please summarize them briefly in your own words:
-## 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          {&quot;ImportId&quot;:&quot;QID131_TEXT&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Find 2 numbers that add up to exactly 10.
-## 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 kjn
-## 5                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                test
-##              X1_matrixtime_First.Click            X1_matrixtime_Last.Click
-## 1 Timing - 0.47 - Timing - First Click Timing - 0.47 - Timing - Last Click
-## 2  {&quot;ImportId&quot;:&quot;1_QID133_FIRST_CLICK&quot;}  {&quot;ImportId&quot;:&quot;1_QID133_LAST_CLICK&quot;}
-## 3                                    0                                   0
-## 4                               10.427                              10.427
-## 5                                1.452                               1.452
-##              X1_matrixtime_Page.Submit            X1_matrixtime_Click.Count
-## 1 Timing - 0.47 - Timing - Page Submit Timing - 0.47 - Timing - Click Count
-## 2  {&quot;ImportId&quot;:&quot;1_QID133_PAGE_SUBMIT&quot;}  {&quot;ImportId&quot;:&quot;1_QID133_CLICK_COUNT&quot;}
-## 3                               21.007                                    0
-## 4                               13.568                                    1
-## 5                                2.256                                    1
-##                                                                                                                                                                                                                                                                                                                                    X1_secondcomprehension2
-## 1 0.47 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Field-1]​\n\n\t\t\t[Field-2]​\n\t\t\t[Field-3]​\n\t\t\n\t\t\n\t\t\t[Field-4]​\n\t\t\t[Field-5]\n\t\t\t[Field-6]\n\t\t\n\t\t\n\t\t\t[Field-7]​\n\t\t\t[Field-8]​\n\t\t\t[Field-9]​\n\t\t\n\t\t\n\t\t\t[Field-10]​\n\t\t\t[Field-11]​\n\t\t\t[Field-12]​
-## 2                                                                                                                                                                                                                                                                                                                                  {&quot;ImportId&quot;:&quot;1_QID134&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                        0
-## 4                                                                                                                                                                                                                                                                                                                                                        1
-## 5                                                                                                                                                                                                                                                                                                                                                        0
-##              X2_matrixtime_First.Click            X2_matrixtime_Last.Click
-## 1 Timing - 1.46 - Timing - First Click Timing - 1.46 - Timing - Last Click
-## 2  {&quot;ImportId&quot;:&quot;2_QID133_FIRST_CLICK&quot;}  {&quot;ImportId&quot;:&quot;2_QID133_LAST_CLICK&quot;}
-## 3                                    0                                   0
-## 4                                5.178                               5.178
-## 5                                 0.94                                0.94
-##              X2_matrixtime_Page.Submit            X2_matrixtime_Click.Count
-## 1 Timing - 1.46 - Timing - Page Submit Timing - 1.46 - Timing - Click Count
-## 2  {&quot;ImportId&quot;:&quot;2_QID133_PAGE_SUBMIT&quot;}  {&quot;ImportId&quot;:&quot;2_QID133_CLICK_COUNT&quot;}
-## 3                               21.107                                    0
-## 4                                6.353                                    1
-## 5                                1.665                                    1
-##                                                                                                                                                                                                                                                                                                                                    X2_secondcomprehension2
-## 1 1.46 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Field-1]​\n\n\t\t\t[Field-2]​\n\t\t\t[Field-3]​\n\t\t\n\t\t\n\t\t\t[Field-4]​\n\t\t\t[Field-5]\n\t\t\t[Field-6]\n\t\t\n\t\t\n\t\t\t[Field-7]​\n\t\t\t[Field-8]​\n\t\t\t[Field-9]​\n\t\t\n\t\t\n\t\t\t[Field-10]​\n\t\t\t[Field-11]​\n\t\t\t[Field-12]​
-## 2                                                                                                                                                                                                                                                                                                                                  {&quot;ImportId&quot;:&quot;2_QID134&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                        0
-## 4                                                                                                                                                                                                                                                                                                                                                        1
-## 5                                                                                                                                                                                                                                                                                                                                                        0
-##              X3_matrixtime_First.Click            X3_matrixtime_Last.Click
-## 1 Timing - 0.06 - Timing - First Click Timing - 0.06 - Timing - Last Click
-## 2  {&quot;ImportId&quot;:&quot;3_QID133_FIRST_CLICK&quot;}  {&quot;ImportId&quot;:&quot;3_QID133_LAST_CLICK&quot;}
-## 3                                    0                                   0
-## 4                                    0                                   0
-## 5                                0.849                               0.849
-##              X3_matrixtime_Page.Submit            X3_matrixtime_Click.Count
-## 1 Timing - 0.06 - Timing - Page Submit Timing - 0.06 - Timing - Click Count
-## 2  {&quot;ImportId&quot;:&quot;3_QID133_PAGE_SUBMIT&quot;}  {&quot;ImportId&quot;:&quot;3_QID133_CLICK_COUNT&quot;}
-## 3                               21.007                                    0
-## 4                                4.201                                    0
-## 5                                 1.47                                    1
-##                                                                                                                                                                                                                                                                                                                                    X3_secondcomprehension2
-## 1 0.06 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Field-1]​\n\n\t\t\t[Field-2]​\n\t\t\t[Field-3]​\n\t\t\n\t\t\n\t\t\t[Field-4]​\n\t\t\t[Field-5]\n\t\t\t[Field-6]\n\t\t\n\t\t\n\t\t\t[Field-7]​\n\t\t\t[Field-8]​\n\t\t\t[Field-9]​\n\t\t\n\t\t\n\t\t\t[Field-10]​\n\t\t\t[Field-11]​\n\t\t\t[Field-12]​
-## 2                                                                                                                                                                                                                                                                                                                                  {&quot;ImportId&quot;:&quot;3_QID134&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                        0
-## 4                                                                                                                                                                                                                                                                                                                                                        0
-## 5                                                                                                                                                                                                                                                                                                                                                        0
-##              X4_matrixtime_First.Click            X4_matrixtime_Last.Click
-## 1 Timing - 0.14 - Timing - First Click Timing - 0.14 - Timing - Last Click
-## 2  {&quot;ImportId&quot;:&quot;4_QID133_FIRST_CLICK&quot;}  {&quot;ImportId&quot;:&quot;4_QID133_LAST_CLICK&quot;}
-## 3                                    0                                   0
-## 4                                3.677                               4.711
-## 5                                0.845                               1.374
-##              X4_matrixtime_Page.Submit            X4_matrixtime_Click.Count
-## 1 Timing - 0.14 - Timing - Page Submit Timing - 0.14 - Timing - Click Count
-## 2  {&quot;ImportId&quot;:&quot;4_QID133_PAGE_SUBMIT&quot;}  {&quot;ImportId&quot;:&quot;4_QID133_CLICK_COUNT&quot;}
-## 3                               21.008                                    0
-## 4                               11.748                                    2
-## 5                                1.752                                    2
-##                                                                                                                                                                                                                                                                                                                                    X4_secondcomprehension2
-## 1 0.14 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Field-1]​\n\n\t\t\t[Field-2]​\n\t\t\t[Field-3]​\n\t\t\n\t\t\n\t\t\t[Field-4]​\n\t\t\t[Field-5]\n\t\t\t[Field-6]\n\t\t\n\t\t\n\t\t\t[Field-7]​\n\t\t\t[Field-8]​\n\t\t\t[Field-9]​\n\t\t\n\t\t\n\t\t\t[Field-10]​\n\t\t\t[Field-11]​\n\t\t\t[Field-12]​
-## 2                                                                                                                                                                                                                                                                                                                                  {&quot;ImportId&quot;:&quot;4_QID134&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                        0
-## 4                                                                                                                                                                                                                                                                                                                                                        0
-## 5                                                                                                                                                                                                                                                                                                                                                        0
-##              X5_matrixtime_First.Click            X5_matrixtime_Last.Click
-## 1 Timing - 2.01 - Timing - First Click Timing - 2.01 - Timing - Last Click
-## 2  {&quot;ImportId&quot;:&quot;5_QID133_FIRST_CLICK&quot;}  {&quot;ImportId&quot;:&quot;5_QID133_LAST_CLICK&quot;}
-## 3                                    0                                   0
-## 4                                  7.6                                8.07
-## 5                                0.888                               0.888
-##              X5_matrixtime_Page.Submit            X5_matrixtime_Click.Count
-## 1 Timing - 2.01 - Timing - Page Submit Timing - 2.01 - Timing - Click Count
-## 2  {&quot;ImportId&quot;:&quot;5_QID133_PAGE_SUBMIT&quot;}  {&quot;ImportId&quot;:&quot;5_QID133_CLICK_COUNT&quot;}
-## 3                                3.357                                    0
-## 4                               21.007                                    2
-## 5                                1.382                                    1
-##                                                                                                                                                                                                                                                                                                                                    X5_secondcomprehension2
-## 1 2.01 - Can you find two numbers that add up to exactly 10 in the table below? \n\n \n\n\n\n\t\n\t\t\n\t\t\t[Field-1]​\n\n\t\t\t[Field-2]​\n\t\t\t[Field-3]​\n\t\t\n\t\t\n\t\t\t[Field-4]​\n\t\t\t[Field-5]\n\t\t\t[Field-6]\n\t\t\n\t\t\n\t\t\t[Field-7]​\n\t\t\t[Field-8]​\n\t\t\t[Field-9]​\n\t\t\n\t\t\n\t\t\t[Field-10]​\n\t\t\t[Field-11]​\n\t\t\t[Field-12]​
-## 2                                                                                                                                                                                                                                                                                                                                  {&quot;ImportId&quot;:&quot;5_QID134&quot;}
-## 3                                                                                                                                                                                                                                                                                                                                                        0
-## 4                                                                                                                                                                                                                                                                                                                                                        1
-## 5                                                                                                                                                                                                                                                                                                                                                        0
-##                               usage1
-## 1 How often do you use [Field-site]?
-## 2               {&quot;ImportId&quot;:&quot;QID28&quot;}
-## 3                                  1
-## 4                                  3
-## 5                                  1
-##                                                                   usage2
-## 1 Why do you use [Field-site]?\n(check all that apply) - Selected Choice
-## 2                                                   {&quot;ImportId&quot;:&quot;QID29&quot;}
-## 3                                                                      3
-## 4                                                                      1
-## 5                                                                      3
-##                                                         usage2_4_TEXT
-## 1 Why do you use [Field-site]?\n(check all that apply) - Other - Text
-## 2                                         {&quot;ImportId&quot;:&quot;QID29_4_TEXT&quot;}
-## 3                                                                    
-## 4                                                                    
-## 5                                                                    
-##                                                            usage3
-## 1 How much, on average, do you earn in a week using [Field-site]?
-## 2                                       {&quot;ImportId&quot;:&quot;QID71_TEXT&quot;}
-## 3                                                            none
-## 4                                                              mn
-## 5                                                            test
-##                                                                        usage4
-## 1 What percent of your submissions have been approved so far on [Field-site]?
-## 2                                                   {&quot;ImportId&quot;:&quot;QID83_TEXT&quot;}
-## 3                                                                        none
-## 4                                                                         mnk
-## 5                                                                        test
-##                                                                                                       Q9.5_8
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Amazon MTurk
-## 2                                                                                     {&quot;ImportId&quot;:&quot;QID69_8&quot;}
-## 3                                                                                                          1
-## 4                                                                                                          1
-## 5                                                                                                          3
-##                                                                                                   Q9.5_9
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Prolific
-## 2                                                                                 {&quot;ImportId&quot;:&quot;QID69_9&quot;}
-## 3                                                                                                      1
-## 4                                                                                                      3
-## 5                                                                                                      3
-##                                                                                                      Q9.5_20
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - SurveyMonkey
-## 2                                                                                    {&quot;ImportId&quot;:&quot;QID69_20&quot;}
-## 3                                                                                                          1
-## 4                                                                                                           
-## 5                                                                                                          3
-##                                                                                                     Q9.5_21
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - CrowdFlower
-## 2                                                                                   {&quot;ImportId&quot;:&quot;QID69_21&quot;}
-## 3                                                                                                         1
-## 4                                                                                                          
-## 5                                                                                                         3
-##                                                                                                                Q9.5_16
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Other (please specify)
-## 2                                                                                              {&quot;ImportId&quot;:&quot;QID69_16&quot;}
-## 3                                                                                                                    1
-## 4                                                                                                                    4
-## 5                                                                                                                    3
-##                                                                                                                  Q9.5_16_TEXT
-## 1 Do you use any of the web sites listed below as a participant/worker and, if so, how often? - Other (please specify) - Text
-## 2                                                                                                {&quot;ImportId&quot;:&quot;QID69_16_TEXT&quot;}
-## 3                                                                                                                            
-## 4                                                                                                                            
-## 5                                                                                                                            
-##                                                                                                                         usage6
-## 1 Have you completed a study similar to this study in the past several months? If so, where did you take it? - Selected Choice
-## 2                                                                                                        {&quot;ImportId&quot;:&quot;QID143&quot;}
-## 3                                                                                                                            4
-## 4                                                                                                                            2
-## 5                                                                                                                            5
-##                                                                                                                                      usage6_3_TEXT
-## 1 Have you completed a study similar to this study in the past several months? If so, where did you take it? - Yes - through another source - Text
-## 2                                                                                                                     {&quot;ImportId&quot;:&quot;QID143_3_TEXT&quot;}
-## 3                                                                                                                                                 
-## 4                                                                                                                                                 
-## 5                                                                                                                                                 
-##                                                                                   honesty2
-## 1 If you fit those criteria, would you like to be invited to that study? - Selected Choice
-## 2                                                                    {&quot;ImportId&quot;:&quot;QID140&quot;}
-## 3                                                                                        3
-## 4                                                                                        1
-## 5                                                                                        3
-##                                                                         honesty2_4_TEXT
-## 1 If you fit those criteria, would you like to be invited to that study? - Other - Text
-## 2                                                          {&quot;ImportId&quot;:&quot;QID140_4_TEXT&quot;}
-## 3                                                                                      
-## 4                                                                                      
-## 5                                                                                      
-##                                                                                                                                                                                                                                                                                                                                 id
-## 1 Thank you very much for completing our study!\n\n \n\nThe purpose of this study was to better understand individual differences in personal attitudes, opinions and behaviors. Please do not share the content of this survey with other potential participants.\n\n \nTo finish, please verify/enter your ID and click on next.
-## 2                                                                                                                                                                                                                                                                                                       {&quot;ImportId&quot;:&quot;QID122_TEXT&quot;}
-## 3                                                                                                                                                                                                                                                                                                                             test
-## 4                                                                                                                                                                                                                                                                                                                             yt6j
-## 5                                                                                                                                                                                                                                                                                                                             test
-##                                                                                                                     comments
-## 1 If you have any last comments/questions, you may enter them below before clicking next and receiving your completion code.
-## 2                                                                                                 {&quot;ImportId&quot;:&quot;QID110_TEXT&quot;}
-## 3                                                                                                                       test
-## 4                                                                                                                        jhk
-## 5                                                                                                                       test
-##                                 SC0                PROLIFIC_PID
-## 1                             Score                PROLIFIC_PID
-## 2 {&quot;ImportId&quot;:&quot;SC_8GLLErbq6mmDpaZ&quot;} {&quot;ImportId&quot;:&quot;PROLIFIC_PID&quot;}
-## 3                                 0                            
-## 4                                 3                            
-## 5                                 0                            
-##                  workerid                assignmentId                hitId
-## 1                workerid                assignmentId                hitId
-## 2 {&quot;ImportId&quot;:&quot;workerid&quot;} {&quot;ImportId&quot;:&quot;assignmentId&quot;} {&quot;ImportId&quot;:&quot;hitId&quot;}
-## 3                                                                         
-## 4                                                                         
-## 5                                                                         
-##                  site              age.1                sign
-## 1                site                age                sign
-## 2 {&quot;ImportId&quot;:&quot;site&quot;} {&quot;ImportId&quot;:&quot;age&quot;} {&quot;ImportId&quot;:&quot;sign&quot;}
-## 3               MTurk                                    USD
-## 4               MTurk                                    USD
-## 5               MTurk                                    USD
-##                  sample
-## 1                sample
-## 2 {&quot;ImportId&quot;:&quot;sample&quot;}
-## 3                    CR
-## 4                    CR
-## 5                    CR</code></pre>
-<pre class="r"><code>      # Show the whole dataset in the data viewer
-        View(dat)</code></pre>
+##  [87] &quot;X4_honesty2&quot;                    &quot;X5_honesty2&quot;                   
+##  [89] &quot;usage1&quot;                         &quot;usage2&quot;                        
+##  [91] &quot;usage2_4_TEXT&quot;                  &quot;usage3&quot;                        
+##  [93] &quot;usage4&quot;                         &quot;Q9.5_8&quot;                        
+##  [95] &quot;Q9.5_9&quot;                         &quot;Q9.5_20&quot;                       
+##  [97] &quot;Q9.5_21&quot;                        &quot;Q9.5_16&quot;                       
+##  [99] &quot;Q9.5_16_TEXT&quot;                   &quot;usage6&quot;                        
+## [101] &quot;usage6_3_TEXT&quot;                  &quot;honesty3&quot;                      
+## [103] &quot;honesty3_2_TEXT&quot;                &quot;id&quot;                            
+## [105] &quot;comments&quot;                       &quot;SC0&quot;                           
+## [107] &quot;PROLIFIC_PID&quot;                   &quot;workerid&quot;                      
+## [109] &quot;assignmentId&quot;                   &quot;hitId&quot;                         
+## [111] &quot;site&quot;                           &quot;age.1&quot;                         
+## [113] &quot;gender.1&quot;                       &quot;sign&quot;                          
+## [115] &quot;sample&quot;</code></pre>
+<pre class="r"><code>        head(dat) # first five rows</code></pre>
+<pre><code>##        StartDate        EndDate Status       IPAddress Progress
+## 1 11/11/21 12:49 11/11/21 13:34      1                      100
+## 2  11/21/21 1:59  11/21/21 2:03      1                      100
+## 3  11/23/21 8:23  11/23/21 8:26      1                      100
+## 4  11/29/21 0:16  11/29/21 0:28      0 108.184.108.129      100
+## 5 11/29/21 14:20 11/29/21 14:20      1                      100
+## 6 11/11/21 12:49 11/11/21 13:34      1                      100
+##   Duration..in.seconds. Finished   RecordedDate        ResponseId
+## 1                  2674        1 11/11/21 13:34 R_1LHzGg3drfb3Es9
+## 2                   263        1  11/21/21 2:03 R_dp5vx4YeLQe4IUN
+## 3                   134        1  11/23/21 8:26 R_V4OFpPDXAjruZj3
+## 4                   741        1  11/29/21 0:28 R_3D0Hl3F2sTKawIc
+## 5                    43        1 11/29/21 14:20 R_0OCScwrGeSphq13
+## 6                  2674        1 11/11/21 13:34 R_1LHzGg3drfb3Es9
+##   RecipientLastName RecipientFirstName RecipientEmail ExternalReference
+## 1                NA                 NA             NA                NA
+## 2                NA                 NA             NA                NA
+## 3                NA                 NA             NA                NA
+## 4                NA                 NA             NA                NA
+## 5                NA                 NA             NA                NA
+## 6                NA                 NA             NA                NA
+##   LocationLatitude LocationLongitude DistributionChannel UserLanguage
+## 1         37.46510         -122.1430             preview           EN
+## 2         37.44051         -122.1478             preview           EN
+## 3         45.49950          -73.5848             preview           EN
+## 4         34.12109         -117.4362           anonymous           EN
+## 5         37.42300         -122.1639             preview           EN
+## 6         37.46510         -122.1430             preview           EN
+##   Q_BallotBoxStuffing Q1.2_Browser Q1.2_Version Q1.2_Operating.System
+## 1                  NA      Firefox           94             Macintosh
+## 2                  NA       Chrome 95.0.4638.69             Macintosh
+## 3                  NA      Firefox           94             Macintosh
+## 4                  NA       Chrome 96.0.4664.45       Windows NT 10.0
+## 5                  NA       Chrome 95.0.4638.69             Macintosh
+## 6                  NA      Firefox           94             Macintosh
+##   Q1.2_Resolution gender gender_3_TEXT age ethnicity ethnicity_5_TEXT education
+## 1        1440x900      2            NA  19         5      Asian/White         6
+## 2        1440x900      2            NA  15         7                          5
+## 3        1440x900      2            NA  19         5                          4
+## 4       1920x1080      4            NA  12       2,4                          2
+## 5        1440x900      2            NA  11         1                         NA
+## 6        1440x900      2            NA  19         5      Asian/White         6
+##   education_9_TEXT income country ac1 ac2 nfc1 nfc2 nfc3 nfc4 nfc5 nfc6 nfc7
+## 1               NA      3     189   6   3    2    1    4    4    3    2    3
+## 2               NA      2     189   5   3    1    2    2    2    3    2    1
+## 3               NA      3     189   4   4    3    3    3    3    3    3    3
+## 4               NA      2     189   3   2    1    1    4    5    3    1    5
+## 5               NA     NA      NA  NA  NA   NA   NA   NA   NA   NA   NA   NA
+## 6               NA      3     189   6   3    2    1    4    4    3    2    3
+##   nfc8 nfc9 nfc10 nfc11 ac3 nfc12 nfc13 nfc14 nfc15 nfc16 nfc17 nfc18
+## 1    4    4     3     4   1     3     2     4     3     4     2     2
+## 2    1    1     1     2   3     4     5     5     4     5     5     5
+## 3    3    3     3     3   3     3     3     3     3     3     3     3
+## 4    3    5     2     2   1     3     2     3     1     5     4     3
+## 5   NA   NA    NA    NA  NA    NA    NA    NA    NA    NA    NA    NA
+## 6    4    4     3     4   1     3     2     4     3     4     2     2
+##   nfctime_First.Click nfctime_Last.Click nfctime_Page.Submit
+## 1              10.786            114.028             114.901
+## 2               0.677             69.669              70.994
+## 3               2.499             11.631              13.557
+## 4               9.766            222.089             223.244
+## 5               0.000              0.000               0.877
+## 6              10.786            114.028             114.901
+##   nfctime_Click.Count
+## 1                  27
+## 2                  44
+## 3                  20
+## 4                  33
+## 5                   0
+## 6                  27
+##                                                                              comprehension1
+## 1 Basically ignore the first part and say zero persons regardless of how many people I see.
+## 2                                                                                      jnkn
+## 3                                                                                      test
+## 4                                                   report i see zero people in the picture
+## 5                                                                                          
+## 6 Basically ignore the first part and say zero persons regardless of how many people I see.
+##   comprehensiontime1_First.Click comprehensiontime1_Last.Click
+## 1                         29.964                        29.964
+## 2                          2.263                         2.263
+## 3                          2.787                         2.787
+## 4                          4.629                        44.234
+## 5                          0.000                         0.000
+## 6                         29.964                        29.964
+##   comprehensiontime1_Page.Submit comprehensiontime1_Click.Count
+## 1                         59.447                              1
+## 2                          4.887                              1
+## 3                          4.389                              1
+## 4                         57.966                              5
+## 5                          1.375                              0
+## 6                         59.447                              1
+##   comprehensiontime2_First.Click comprehensiontime2_Last.Click
+## 1                          6.258                         7.527
+## 2                          0.000                         0.000
+## 3                          1.581                         2.800
+## 4                          2.238                         5.079
+## 5                          0.000                         0.000
+## 6                          6.258                         7.527
+##   comprehensiontime2_Page.Submit comprehensiontime2_Click.Count comprehension2
+## 1                          8.305                              2              1
+## 2                          5.162                              0             11
+## 3                          4.072                              2              1
+## 4                          6.393                              3              1
+## 5                          1.447                              0             NA
+## 6                          8.305                              2              1
+##                                             comprehension3
+## 1                Find 2 numbers that add up to exactly 10.
+## 2                                                      kjn
+## 3                                                     test
+## 4 find the numbers that result in exactly 10 in 20 seconds
+## 5                                                         
+## 6                Find 2 numbers that add up to exactly 10.
+##   X1_matrixtime_First.Click X1_matrixtime_Last.Click X1_matrixtime_Page.Submit
+## 1                     0.000                    0.000                    21.007
+## 2                    10.427                   10.427                    13.568
+## 3                     1.452                    1.452                     2.256
+## 4                     0.000                    0.000                    21.010
+## 5                     0.000                    0.000                     1.290
+## 6                     0.000                    0.000                    21.007
+##   X1_matrixtime_Click.Count X1_honesty2 X2_matrixtime_First.Click
+## 1                         0           1                     0.000
+## 2                         1           0                     5.178
+## 3                         1           1                     0.940
+## 4                         0          NA                    19.186
+## 5                         0          NA                     0.000
+## 6                         0           1                     0.000
+##   X2_matrixtime_Last.Click X2_matrixtime_Page.Submit X2_matrixtime_Click.Count
+## 1                    0.000                    21.107                         0
+## 2                    5.178                     6.353                         1
+## 3                    0.940                     1.665                         1
+## 4                   19.186                    20.284                         1
+## 5                    0.000                     1.201                         0
+## 6                    0.000                    21.107                         0
+##   X2_honesty2 X3_matrixtime_First.Click X3_matrixtime_Last.Click
+## 1           1                     0.000                    0.000
+## 2           0                     0.000                    0.000
+## 3           1                     0.849                    0.849
+## 4           0                     0.000                    0.000
+## 5          NA                     0.000                    0.000
+## 6           1                     0.000                    0.000
+##   X3_matrixtime_Page.Submit X3_matrixtime_Click.Count X3_honesty2
+## 1                    21.007                         0           1
+## 2                     4.201                         0           1
+## 3                     1.470                         1           1
+## 4                    21.008                         0          NA
+## 5                     1.373                         0          NA
+## 6                    21.007                         0           1
+##   X4_matrixtime_First.Click X4_matrixtime_Last.Click X4_matrixtime_Page.Submit
+## 1                     0.000                    0.000                    21.008
+## 2                     3.677                    4.711                    11.748
+## 3                     0.845                    1.374                     1.752
+## 4                     0.000                    0.000                    21.011
+## 5                     0.000                    0.000                     1.430
+## 6                     0.000                    0.000                    21.008
+##   X4_matrixtime_Click.Count X4_honesty2 X5_honesty2 usage1 usage2
+## 1                         0           1           1      1      3
+## 2                         2           1           0      3      1
+## 3                         2           1           1      1      3
+## 4                         0          NA          NA      1      4
+## 5                         0          NA          NA     NA     NA
+## 6                         0           1           1      1      3
+##                                                     usage2_4_TEXT usage3 usage4
+## 1                                                                   none   none
+## 2                                                                     mn    mnk
+## 3                                                                   test   test
+## 4 i do not use mturk... i don&#39;t know what that is, i use prolific      0    n/a
+## 5                                                                              
+## 6                                                                   none   none
+##   Q9.5_8 Q9.5_9 Q9.5_20 Q9.5_21 Q9.5_16 Q9.5_16_TEXT usage6 usage6_3_TEXT
+## 1      1      1       1       1       1           NA      4            NA
+## 2      1      3      NA      NA       4           NA      2            NA
+## 3      3      3       3       3       3           NA      5            NA
+## 4      1      5       1       1       1           NA      4            NA
+## 5     NA     NA      NA      NA      NA           NA     NA            NA
+## 6      1      1       1       1       1           NA      4            NA
+##   honesty3 honesty3_2_TEXT                       id comments SC0
+## 1        1              NA                     test     test   0
+## 2        0              NA                     yt6j      jhk   3
+## 3        1              NA                     test     test   0
+## 4        0              NA 610070dbee5929bd59500a26            1
+## 5       NA              NA                                    NA
+## 6        1              NA                     test     test   0
+##               PROLIFIC_PID workerid assignmentId hitId  site age.1 gender.1
+## 1                                NA           NA    NA MTurk    NA       NA
+## 2                                NA           NA    NA MTurk    NA       NA
+## 3                                NA           NA    NA MTurk    NA       NA
+## 4 610070dbee5929bd59500a26       NA           NA    NA MTurk    NA       NA
+## 5                                NA           NA    NA MTurk    NA       NA
+## 6                                NA           NA    NA MTurk    NA       NA
+##   sign sample
+## 1  USD     CR
+## 2  USD     CR
+## 3  USD     CR
+## 4  USD     CR
+## 5  USD     CR
+## 6  USD  Mturk</code></pre>
+<pre class="r"><code>        View(dat) # view dataset</code></pre>
 <pre><code>## Warning in system2(&quot;/usr/bin/otool&quot;, c(&quot;-L&quot;, shQuote(DSO)), stdout = TRUE):
 ## running command &#39;&#39;/usr/bin/otool&#39; -L &#39;/Library/Frameworks/R.framework/Resources/
 ## modules/R_de.so&#39;&#39; had status 1</code></pre>
@@ -1064,256 +708,123 @@ div.tocify {
 ##   Referenced from: /Library/Frameworks/R.framework/Versions/4.1/Resources/modules/R_de.so
 ##   Reason: image not found</code></pre>
 <pre><code>## Error in View(dat): X11 dataentry cannot be loaded</code></pre>
-<pre class="r"><code>      # Get the number of rows in your dataset
-        nrow(dat)</code></pre>
-<pre><code>## [1] 5</code></pre>
-<pre class="r"><code>      # Get the number of columns in your dataset
-        ncol(dat)</code></pre>
-<pre><code>## [1] 118</code></pre>
-<pre class="r"><code>      # Looking at a random set of 10 observations
-        sample_n(dat, 10)</code></pre>
-<pre><code>## Error: `size` must be less or equal than 5 (size of data), set `replace` = TRUE to use sampling with replacement.</code></pre>
-<pre class="r"><code>      # Look at whole dataframe
-        library(summarytools)</code></pre>
-<pre><code>## Warning in system2(&quot;/usr/bin/otool&quot;, c(&quot;-L&quot;, shQuote(DSO)), stdout = TRUE):
-## running command &#39;&#39;/usr/bin/otool&#39; -L &#39;/Library/Frameworks/R.framework/Resources/
-## library/tcltk/libs//tcltk.so&#39;&#39; had status 1</code></pre>
-<pre><code>## Error: package or namespace load failed for &#39;summarytools&#39;:
-##  .onLoad failed in loadNamespace() for &#39;tcltk&#39;, details:
-##   call: dyn.load(file, DLLpath = DLLpath, ...)
-##   error: unable to load shared object &#39;/Library/Frameworks/R.framework/Versions/4.1/Resources/library/tcltk/libs/tcltk.so&#39;:
-##   dlopen(/Library/Frameworks/R.framework/Versions/4.1/Resources/library/tcltk/libs/tcltk.so, 10): Library not loaded: /opt/X11/lib/libX11.6.dylib
-##   Referenced from: /Library/Frameworks/R.framework/Versions/4.1/Resources/library/tcltk/libs/tcltk.so
-##   Reason: image not found</code></pre>
-<pre class="r"><code>        view(dfSummary(dat))</code></pre>
-<pre><code>## Error in dfSummary(dat): could not find function &quot;dfSummary&quot;</code></pre>
-<pre class="r"><code> #### Looking at columns ####
-      
-    # View the levels of a factor and their order
-      levels(dat$cond)</code></pre>
-<pre><code>## NULL</code></pre>
-<pre class="r"><code>    # View a summary of your data (count of each factor level for factors, numeric summary for numeric)
-      summary(dat)</code></pre>
-<pre><code>##   StartDate           EndDate             Status           IPAddress        
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##    Progress         Duration..in.seconds.   Finished         RecordedDate      
-##  Length:5           Length:5              Length:5           Length:5          
-##  Class :character   Class :character      Class :character   Class :character  
-##  Mode  :character   Mode  :character      Mode  :character   Mode  :character  
-##   ResponseId        RecipientLastName  RecipientFirstName RecipientEmail    
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  ExternalReference  LocationLatitude   LocationLongitude  DistributionChannel
-##  Length:5           Length:5           Length:5           Length:5           
-##  Class :character   Class :character   Class :character   Class :character   
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character   
-##  UserLanguage       Q_BallotBoxStuffing Q1.2_Browser       Q1.2_Version      
-##  Length:5           Length:5            Length:5           Length:5          
-##  Class :character   Class :character    Class :character   Class :character  
-##  Mode  :character   Mode  :character    Mode  :character   Mode  :character  
-##  Q1.2_Operating.System Q1.2_Resolution       gender          gender_3_TEXT     
-##  Length:5              Length:5           Length:5           Length:5          
-##  Class :character      Class :character   Class :character   Class :character  
-##  Mode  :character      Mode  :character   Mode  :character   Mode  :character  
-##      age             ethnicity         ethnicity_5_TEXT    education        
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  education_9_TEXT      income            country            firstac1        
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##    firstac2            Q14_1              Q14_2              Q14_3          
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##     Q14_4              Q14_5              Q14_6              Q14_7          
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##     Q14_8              Q14_9              Q14_10             Q14_11         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##     Q14_19             Q14_12             Q14_13             Q14_14         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##     Q14_15             Q14_16             Q14_17             Q14_18         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  secondacqtime_First.Click secondacqtime_Last.Click secondacqtime_Page.Submit
-##  Length:5                  Length:5                 Length:5                 
-##  Class :character          Class :character         Class :character         
-##  Mode  :character          Mode  :character         Mode  :character         
-##  secondacqtime_Click.Count firstcomprehension1 comprehensiontime_First.Click
-##  Length:5                  Length:5            Length:5                     
-##  Class :character          Class :character    Class :character             
-##  Mode  :character          Mode  :character    Mode  :character             
-##  comprehensiontime_Last.Click comprehensiontime_Page.Submit
-##  Length:5                     Length:5                     
-##  Class :character             Class :character             
-##  Mode  :character             Mode  :character             
-##  comprehensiontime_Click.Count comprehensiontime2_First.Click
-##  Length:5                      Length:5                      
-##  Class :character              Class :character              
-##  Mode  :character              Mode  :character              
-##  comprehensiontime2_Last.Click comprehensiontime2_Page.Submit
-##  Length:5                      Length:5                      
-##  Class :character              Class :character              
-##  Mode  :character              Mode  :character              
-##  comprehensiontime2_Click.Count firstcomprehension2 secondcomprehension1
-##  Length:5                       Length:5            Length:5            
-##  Class :character               Class :character    Class :character    
-##  Mode  :character               Mode  :character    Mode  :character    
-##  X1_matrixtime_First.Click X1_matrixtime_Last.Click X1_matrixtime_Page.Submit
-##  Length:5                  Length:5                 Length:5                 
-##  Class :character          Class :character         Class :character         
-##  Mode  :character          Mode  :character         Mode  :character         
-##  X1_matrixtime_Click.Count X1_secondcomprehension2 X2_matrixtime_First.Click
-##  Length:5                  Length:5                Length:5                 
-##  Class :character          Class :character        Class :character         
-##  Mode  :character          Mode  :character        Mode  :character         
-##  X2_matrixtime_Last.Click X2_matrixtime_Page.Submit X2_matrixtime_Click.Count
-##  Length:5                 Length:5                  Length:5                 
-##  Class :character         Class :character          Class :character         
-##  Mode  :character         Mode  :character          Mode  :character         
-##  X2_secondcomprehension2 X3_matrixtime_First.Click X3_matrixtime_Last.Click
-##  Length:5                Length:5                  Length:5                
-##  Class :character        Class :character          Class :character        
-##  Mode  :character        Mode  :character          Mode  :character        
-##  X3_matrixtime_Page.Submit X3_matrixtime_Click.Count X3_secondcomprehension2
-##  Length:5                  Length:5                  Length:5               
-##  Class :character          Class :character          Class :character       
-##  Mode  :character          Mode  :character          Mode  :character       
-##  X4_matrixtime_First.Click X4_matrixtime_Last.Click X4_matrixtime_Page.Submit
-##  Length:5                  Length:5                 Length:5                 
-##  Class :character          Class :character         Class :character         
-##  Mode  :character          Mode  :character         Mode  :character         
-##  X4_matrixtime_Click.Count X4_secondcomprehension2 X5_matrixtime_First.Click
-##  Length:5                  Length:5                Length:5                 
-##  Class :character          Class :character        Class :character         
-##  Mode  :character          Mode  :character        Mode  :character         
-##  X5_matrixtime_Last.Click X5_matrixtime_Page.Submit X5_matrixtime_Click.Count
-##  Length:5                 Length:5                  Length:5                 
-##  Class :character         Class :character          Class :character         
-##  Mode  :character         Mode  :character          Mode  :character         
-##  X5_secondcomprehension2    usage1             usage2         
-##  Length:5                Length:5           Length:5          
-##  Class :character        Class :character   Class :character  
-##  Mode  :character        Mode  :character   Mode  :character  
-##  usage2_4_TEXT         usage3             usage4             Q9.5_8         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##     Q9.5_9            Q9.5_20            Q9.5_21            Q9.5_16         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  Q9.5_16_TEXT          usage6          usage6_3_TEXT        honesty2        
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  honesty2_4_TEXT         id              comments             SC0           
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##  PROLIFIC_PID         workerid         assignmentId          hitId          
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character  
-##      site              age.1               sign              sample         
-##  Length:5           Length:5           Length:5           Length:5          
-##  Class :character   Class :character   Class :character   Class :character  
-##  Mode  :character   Mode  :character   Mode  :character   Mode  :character</code></pre>
-<pre class="r"><code>  #### Summary statistics ####
-   # Getting summary values with the standard error. Good for plotting. 
-      # Rmisc package
-      datsum &lt;- summarySE(dat, eachmeasure =&quot;value&quot;,
-          groupvars=c(&quot;platform&quot;,&quot;variable&quot;))</code></pre>
-<pre><code>## Error in summarySE(dat, eachmeasure = &quot;value&quot;, groupvars = c(&quot;platform&quot;, : could not find function &quot;summarySE&quot;</code></pre>
+<pre class="r"><code>        nrow(dat) # number of rows in dataset</code></pre>
+<pre><code>## [1] 10</code></pre>
+<pre class="r"><code>        ncol(dat) # number of columns in dataset</code></pre>
+<pre><code>## [1] 115</code></pre>
 <pre class="r"><code>#### Data exclusion / filtering
   #### Removing unwanted data ####
-      
     # Omitting rows with NAs
       data &lt;- na.omit(dat)
-    
-
-#### Prepare data for analysis - create columns etc.
-      
-      filtered_data %&gt;% 
-  group_by(sample) %&gt;% 
-  summarize(avg_sales = mean(sales))</code></pre>
-<pre><code>## Error in group_by(., sample): object &#39;filtered_data&#39; not found</code></pre>
+    # Removing columns we don&#39;t need about for primary analyses
+      dat &lt;- dat %&gt;% 
+          dplyr::select(ac1, ac2, ac3, comprehension1, 
+                        comprehension2, contains(&quot;honesty&quot;),
+                        ResponseId, site, sample
+                        )</code></pre>
 </div>
 <div id="confirmatory-analysis" class="section level3">
 <h3>Confirmatory analysis</h3>
-<p>The analyses as specified in the analysis plan.</p>
-<p>I will report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across all sites.</p>
+<p>I report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across the three sites.</p>
 <p>ATTENTION (originally : ACQs, χ2(4) = 548.48, 203.56, p &lt; .001. )</p>
-<pre class="r"><code>recode firstacq1 so that :
-   pass if  acq1 = &quot;6&quot; ; fail ifelse
-recode firstacq2 so that :
-   pass if acq2 = &quot;3&quot; ; fail ifelse
-firstacq &lt;- c(acq1, acq2)
+<pre class="r"><code>#### recode ac1 so that : pass if  ac1 = &quot;6&quot; ; fail ifelse
+#### record ac2 so that : pass if ac2 = &quot;3&quot; ; fail ifelse
+#### recode ac3 so that :  pass if ac3 = &#39;1&#39; ; fail ifelse
 
-recode secondacq so that : 
-    pass if nfc12 = &#39;1&#39; ; fail ifelse</code></pre>
-<pre><code>## Error: &lt;text&gt;:1:8: unexpected symbol
-## 1: recode firstacq1
-##            ^</code></pre>
+dat &lt;- dat %&gt;% 
+  mutate(ac1_pass = ifelse(ac1 == &quot;6&quot;, 1,0),
+         ac2_pass = ifelse(ac2 == &quot;3&quot;, 1,0),
+         ac3_pass = ifelse(ac3 == &quot;1&quot;, 1,0),
+         ac_total = (ac1_pass + ac2_pass + ac3_pass)
+         )</code></pre>
 <p>COMPREHENSION (originally : χ2(4) = 152.4, p &lt; .001 )</p>
-<pre class="r"><code>Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
-  
-manually code open responses to firstcomprehension1
-manually code open responses to secondcomprehension1</code></pre>
-<pre><code>## Error: &lt;text&gt;:1:6: unexpected numeric constant
-## 1: Have 2
-##          ^</code></pre>
-<p>HONESTY (originally : χ2(4) = 153.44, p &lt; .001 )</p>
-<pre class="r"><code>fifth problem was unsolvable and the original investigators focused on this problem’s reports as a measure of dishonesty3.</code></pre>
-<pre><code>## Error: &lt;text&gt;:1:7: unexpected symbol
-## 1: fifth problem
-##           ^</code></pre>
-<p>RELIABILITY (originally : )</p>
-<pre class="r"><code>&quot;Reliability was measured using the NFC scale (Cacioppo et al., 1984), which measures the extent to which respondents like to engage in and enjoy thinking.
-The negatively worded items were recoded before analyses.
-We chose these scales because they have been found as highly reliable and were validated across extensive studies previously.&quot;
+<pre class="r"><code>#### Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
+  ### manually code open responses to comprehension1
+  ### manually code open responses to comprehension2
 
-nfc&lt;- c(nfc1 to nfc11, nfc13 to nfc18)
- recode reversescored items</code></pre>
-<pre><code>## Error: &lt;text&gt;:5:14: unexpected symbol
-## 4: 
-## 5: nfc&lt;- c(nfc1 to
-##                 ^</code></pre>
-<p>OVERALL DATA QUALITY SCORES (originally: “The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions, and did not claim to have solved the unsolvable problem. The correlations between the five measures ranged between 0.16 and 0.43, all p &lt; .01, but the overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality”)</p>
-<pre class="r"><code>dataquality &lt;- c(acq1,acq2,comprehension1,comprehension2,honesty)</code></pre>
-<pre><code>## Error in eval(expr, envir, enclos): object &#39;acq1&#39; not found</code></pre>
+dat &lt;- dat %&gt;% 
+  mutate(comprehension_total = (comprehension1 + comprehension2)
+         )</code></pre>
+<pre><code>## Error: Problem with `mutate()` column `comprehension_total`.
+## ℹ `comprehension_total = (comprehension1 + comprehension2)`.
+## x non-numeric argument to binary operator</code></pre>
+<p>HONESTY (originally : χ2(4) = 153.44, p &lt; .001 )</p>
+<pre class="r"><code>#### code responses to honesty manually so that:
+  ### honesty1 : 0 = not honest 1 = honest
+  ### honesty2  : 0 = not honest 1 = honest
+  ### honesty3 : 0 = not honest 1 = honest 2 = other
+
+colnames(dat)</code></pre>
+<pre><code>##  [1] &quot;ac1&quot;             &quot;ac2&quot;             &quot;ac3&quot;             &quot;comprehension1&quot; 
+##  [5] &quot;comprehension2&quot;  &quot;X1_honesty2&quot;     &quot;X2_honesty2&quot;     &quot;X3_honesty2&quot;    
+##  [9] &quot;X4_honesty2&quot;     &quot;X5_honesty2&quot;     &quot;honesty3&quot;        &quot;honesty3_2_TEXT&quot;
+## [13] &quot;ResponseId&quot;      &quot;site&quot;            &quot;sample&quot;          &quot;ac1_pass&quot;       
+## [17] &quot;ac2_pass&quot;        &quot;ac3_pass&quot;        &quot;ac_total&quot;</code></pre>
+<pre class="r"><code>dat &lt;- dat %&gt;%
+  mutate(honesty_total = (X1_honesty1 + X2_honesty1 +
+                    X3_honesty1 + X4_honesty1 + X5_honesty1 +
+                    honesty2)
+         )</code></pre>
+<pre><code>## Error: Problem with `mutate()` column `honesty_total`.
+## ℹ `honesty_total = (...)`.
+## x object &#39;X1_honesty1&#39; not found</code></pre>
+<p>RELIABILITY (originally : )</p>
+<pre class="r"><code>#### Reliability is measured using the cronbach alpha of the NFC scale
+# The original authors re-coded the negatively worded items of the NFC before running analyses but here, our code specifically defines the reverse scored items within this scale.
+
+dat &lt;- dat %&gt;% 
+  mutate(nfc3_reversed = ifelse(ac1 == &quot;6&quot;, 1,0),
+         nfc4_reversed = ifelse(ac2 == &quot;3&quot;, 1,0),
+         nfc5_reversed = ifelse(ac3 == &quot;1&quot;, 1,0),
+         nfc7_reversed = ifelse(ac1 == &quot;6&quot;, 1,0),
+         nfc8_reversed = ifelse(ac2 == &quot;3&quot;, 1,0),
+         nfc9_reversed = ifelse(ac3 == &quot;1&quot;, 1,0),
+         nfc12_reversed = ifelse(ac1 == &quot;6&quot;, 1,0),
+         nfc16_reversed = ifelse(ac2 == &quot;3&quot;, 1,0),
+         nfc17_reversed = ifelse(ac3 == &quot;1&quot;, 1,0),
+         nfc_total = (nfc1 + nfc2 + nfc3_reversed +
+                        nfc4_reversed + nfc5_reversed +
+                        nfc6 + nfc7_reversed + nfc8_reversed +
+                        nfc9_reversed + nfc10 + nfc11 +
+                        nfc12_reversed + nfc13 + nfc14 +
+                        nfc15 + nfc16_reversed + nfc17_reversed +
+                        nfc18
+                      )
+         )</code></pre>
+<pre><code>## Error: Problem with `mutate()` column `nfc_total`.
+## ℹ `nfc_total = (...)`.
+## x object &#39;nfc1&#39; not found</code></pre>
+<pre class="r"><code>cronbach.alpha(nfc_total)</code></pre>
+<pre><code>## Error in cronbach.alpha(nfc_total): object &#39;nfc_total&#39; not found</code></pre>
+<p>OVERALL DATA QUALITY SCORES (From the original study: “The score gave participants a value between 0 and 5, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions,.. claim to have solved the unsolvable problem, [and claimed to qualify for a future study that they did not qualify for based on their earlier responses in the survey]. … The overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality”)</p>
+<pre class="r"><code>dat &lt;- dat %&gt;%
+  mutate(dataquality = (ac_total + comprehension_total +
+                           honesty_total)
+          )</code></pre>
+<pre><code>## Error: Problem with `mutate()` column `dataquality`.
+## ℹ `dataquality = (ac_total + comprehension_total + honesty_total)`.
+## x object &#39;comprehension_total&#39; not found</code></pre>
+<pre class="r"><code>colnames(dat)</code></pre>
+<pre><code>##  [1] &quot;ac1&quot;             &quot;ac2&quot;             &quot;ac3&quot;             &quot;comprehension1&quot; 
+##  [5] &quot;comprehension2&quot;  &quot;X1_honesty2&quot;     &quot;X2_honesty2&quot;     &quot;X3_honesty2&quot;    
+##  [9] &quot;X4_honesty2&quot;     &quot;X5_honesty2&quot;     &quot;honesty3&quot;        &quot;honesty3_2_TEXT&quot;
+## [13] &quot;ResponseId&quot;      &quot;site&quot;            &quot;sample&quot;          &quot;ac1_pass&quot;       
+## [17] &quot;ac2_pass&quot;        &quot;ac3_pass&quot;        &quot;ac_total&quot;</code></pre>
 <p>LOOKING AT ALL MEANS ON EACH PLATFORM</p>
 <pre class="r"><code>dat %&gt;% 
-  group_by(platform) %&gt;%
-  summarize(avgvariable = mean(variable, na.rm = T)) # the na.rm tells R to ignore NA values</code></pre>
-<pre><code>## Error: Must group by variables found in `.data`.
-## * Column `platform` is not found.</code></pre>
+  group_by(sample) %&gt;%
+  summarize(dataquality, na.rm = T) # the na.rm tells R to ignore NA values</code></pre>
+<pre><code>## Error: Problem with `summarise()` input `..1`.
+## ℹ `..1 = dataquality`.
+## x object &#39;dataquality&#39; not found
+## ℹ The error occurred in group 1: sample = &quot;&quot;.</code></pre>
 <p>COMPARING DATA QUALITY ACROSS THE THREE GROUPS</p>
 <pre class="r"><code># Compute one-way ANOVA
-difone &lt;- aov(mturk ~ prolific, data = dat)</code></pre>
-<pre><code>## Error in eval(predvars, data, env): object &#39;mturk&#39; not found</code></pre>
-<pre class="r"><code>diftwo &lt;- aov(mturk ~ cloudresearch, data = dat)</code></pre>
-<pre><code>## Error in eval(predvars, data, env): object &#39;mturk&#39; not found</code></pre>
-<pre class="r"><code>difthree &lt;- aov(cloudresearch ~ prolific, data = dat)</code></pre>
-<pre><code>## Error in eval(predvars, data, env): object &#39;cloudresearch&#39; not found</code></pre>
+singleANOVA &lt;- aov(dataquality ~ sample, data = dat)</code></pre>
+<pre><code>## Error in eval(predvars, data, env): object &#39;dataquality&#39; not found</code></pre>
 <pre class="r"><code># Summary of one-way ANOVA
-summary(difone)</code></pre>
-<pre><code>## Error in summary(difone): object &#39;difone&#39; not found</code></pre>
-<pre class="r"><code>summary(diftwo)</code></pre>
-<pre><code>## Error in summary(diftwo): object &#39;diftwo&#39; not found</code></pre>
-<pre class="r"><code>summary(difthree)</code></pre>
-<pre><code>## Error in summary(difthree): object &#39;difthree&#39; not found</code></pre>
+summary(singleANOVA)</code></pre>
+<pre><code>## Error in summary(singleANOVA): object &#39;singleANOVA&#39; not found</code></pre>
 <p><em>Side-by-side graph with original graph is ideal here</em></p>
 <hr />
 </div>
@@ -1325,11 +836,11 @@ summary(difone)</code></pre>
 <h2>Discussion</h2>
 <div id="summary-of-replication-attempt" class="section level3">
 <h3>Summary of Replication Attempt</h3>
-<p>-&gt; Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.</p>
+<p>-&gt; a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.</p>
 </div>
 <div id="commentary" class="section level3">
 <h3>Commentary</h3>
-<p>-&gt; dd open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt. None of these need to be long.</p>
+<p>-&gt; add commentary reflecting about: a) insights from follow-up exploratory analysis b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.</p>
 </div>
 </div>
 
