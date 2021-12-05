@@ -1,0 +1,621 @@
+---
+title: Replication of 'Data quality of platforms and panels for online behavioral
+  research' by Peer et al. (2021, Behavior Research Methods)
+author: "Kimia Saadatian (kimia@stanford.edu)"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float:
+      collapsed: no
+  word_document:
+    toc: yes
+    toc_depth: '3'
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+## Introduction
+
+### Justification for choice of study
+
+I am replicating a recent study by Peer et al. (March, 2021), in which they compared quality of data gathered from the most popular sites used for online behavioral research — Amazon MTurk, CloudResearch (formerly TurkPrime), and Prolific. Peer et al. (2021) found "higher data quality for Prolific and CloudResearch compared to MTurk (the differences between Prolific and MTurk and between CR and MTurk were significant (p < .001), but the difference between CR and Prolific was not (p = 0.91))."
+
+
+In response, a team of investigators from CloudResearch, Litman et al. (2021, SSRN), attempted to replicate Peer et al.'s (2021) findings and found "undisclosed methodological decisions that would limit the inferences made in [the original publication]" (Litman et al., 2021). The team from CloudResearch were specifically concerned that Peer et al. (2021) "chose to turn off the recommended data quality filters and reputation qualifications, including filters that are on by default and were designed to address known data quality issues on MTurk." Contrary to the findings from Peer et al., (2021), upon implementing what they claim are recommended and default filters on MTurk, the team at CloudResearch (Litman et al., 2021) found CloudResearch’s data quality superior to that of Prolific. 
+
+I am curious to examine the data quality filters that were used in each of these studies and investigate these sites' data quality (as operationalize originally by Peer et al. (2021) as a relatively-objective third-party investigator.
+
+### Anticipated challenges
+
+The only challenges I anticipate at this stage is tracking and figuring out the specific automated/default, and manually-set data quality filters that each team of researchers incorporated in their data collection process. 
+
+
+### Links
+
+Project repository: https://github.com/psych251/saadatian2021.git
+
+Survey preview: https://ucbpsych.qualtrics.com/jfe/preview/SV_cSKr5voz0akZ7P8?Q_CHL=preview&Q_SurveyVersionID=current
+
+Project OSF: https://osf.io/qw4sf/?view_only=49333769f6464316a805d48e8cd1d5ca
+
+Original paper: https://github.com/psych251/saadatian2021/blob/3c2eeb3b8a352c51dea439f7878b2ab95f67acff/original-paper/Peer%20et%20al.%20(2021).pdf
+
+Original study's OSF: https://osf.io/342dp/
+
+## Methods
+
+### Power Analysis
+
+Here I aim to replicate the main finding in Study 2, where Peer et al., (2021) compare data quality across the three sites and find "statistically significant differences between the sites on [overall data quality score], F(2, 1458) = 129.4, p < .001, which showed higher scores for Prolific and CR (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9))".
+
+To replicate an F statistic of 129.4 with a power of 0.95, I would need a sample of 43 participants minimum from each site. However, to get precise estimates of the differences in data quality across the three sites, I recruit 100 participants from each of the three platforms (Mturk, CloudResearch, and Prolific). Participants from these three independent samples should add up to a total of 300 participants for the study as a whole.
+
+
+### Planned Sample
+
+One hundred participants who are 18 years or older and ALSO current residents of the United States are recruited on Amazon MTurk, CloudResearch, and Prolific. Similar to the original study, participants are paid a $1.5 each for completing the study, which originally averaged around 9.8 minutes-long (SD = 5.2; Peer et al., 2021). 
+
+#### Data Quality Pre-screening
+The present study implements all data quality pre-screening filters that were used in the original study (Peer et al., 2021). Peer et al. (2021) describe the data quality pre-screening and exclusion criteria as such:
+
+1) "Restricting the study to participants with at least 95% approval rating and at least 100 previous submissions" for participants recruited from all three sites
+2) Using the site setting to "block low data quality workers" on CloudResearch
+3) Excluding Prolific participants who completed their Study 1 on Prolific
+4) Excluding participants on CloudResearch completed their Study 1 on CloudResearch or MTurk
+
+I plan to implement every relevant exclusion criteria used by the original authors (numbers 1 and 2 from the list above).
+
+*Note: since the original investigators had to post the survey twice on Mturk (once through their MTurk account and once through their CR account), some participants (N = 39) completed the survey twice. Peer et al. (2021) removed those participants' later submissions and I will be doing the same. 
+
+
+#### Exclusions
+Unlike the original study, I do not plan to exclude participants who do not complete all of the study as I think that might significantly affect the data quality.
+
+
+### Measures
+
+#### Attention 
+-> *[ac1, ac2, ac3]*
+
+The original scholars measure attention using one two-item explicit question and one covert question. Similar to the original study, "the first [attention check] asks participants to answer "six" and "three" to two items regardless of their actual preference (any other responses are coded as failures); the second is an item within a scale worded "I currently don't pay attention to the questions I'm being asked in the survey" (response other than "strongly disagree" is coded as a failure)."
+
+
+
+#### Comprehension
+-> *[comprehension1 and comprehension2]*
+
+Comprehension is examined via coding of participants' written summaries of instructions to two tasks. "The first task asks participants to identify faces in a picture, but includes an instruction to only report zero; the second includes instructions for the "Matrix task" (Mazar et al., 2008)."In the original study, two independent, blind raters coded the participant responses. The investigators counted an answer as correct if both coders had coded it as correct, applying a third rater to responses with split votes.
+Due to time constraints in data coding and analysis, the PI, Kimia Saadatian, is the sole rater of open responses to comprehension items. Following this class replication project, Kimia plans to have the data coded by two blind raters independently.
+
+
+
+#### Reliability  
+-> *[nfc1 to nfc18]*
+
+---> Not immediately relevant - will later be reported in exploraty analyses.
+
+Similar to the original study, reliability is measured using Cronbach's alpha for the eighteen-item, five-point Need for Cognition scale (Cacioppo et al., 1984). The original investigators chose this scale because it has been validated and found to be highly reliable across many studies.
+
+
+
+#### Honesty 
+-> *[X1_honesty 1 to X5_honesty1, honesty3]*
+
+Replicating the honesty measure in the original study, honesty is measured using "an online version of the Matrix task (Mazar et al., 2008) that include(s) two unsolvable matrices. Reporting solving any of these two problems will be coded as a dishonest response. Additionally, we examine whether participants lie about their eligibility for a future study by asking them to indicate if they want to be invited to a study that samples participants of their own gender but whose age will be described as 5-10 years above the age participants reported in the beginning of the study."
+
+
+
+#### Data Quality
+-> *[ac_total + comprehension_total + honesty_total]*
+
+Data quality was computed by calculating composite score of data quality based on the average scores of attention, comprehension, and dishonesty.
+
+
+#### Other measures
+*The below measures are not immediately relevant to the main analyses reported in this class project report.*
+
+To replicate the original study as closely as possible, we also measure participants' drop-out rates, response duration, overall response time and speed between sites, differences in responses to the NFC scale, demographics, and patterns of usage of the site (main purpose, frequency of usage, number of submissions and approval ratings, usage of other sites), and whether or not the participants have completed a similar study in the last months.
+
+
+### Procedure	
+
+Mimicking the original survey introduction (Peer et al., 2021), the description of the currect study states : "You are invited to complete a survey on individual differences in personal attitudes, opinions, and behaviors." 
+
+I use the original .QSF file for the survey content, which begins with 
+demographic questions, followed by the data quality measures described above. 
+
+Participants are prompted with questions related to their usage of the online platform (e.g., how often they use the site, why they use it, how much they earn on average, their percent of approved submissions (responses that participants submit and are approved by the researcher), and how often (if at all) they use other sites) before finishing the survey and receiving their online payment.
+
+
+#### Deviations from the Original Study 
+
+The new survey did not force responses on any of the questions, except the demographics questions on the first page (data from which is needed for measuring later items). Instead, all questions are set to "request" responses (a Qualtrics setting).
+
+### Analysis Plan
+
+The present study utilizes the same analysis plan (one-way ANOVA) that were conducted in the original study by Peer et al. (2021). I attempt to replicate Study 2, where the main finding is that the data quality is significantly higher for data gathered from Prolific and CloudResearch (M = 5.87, 5.78, SD = 1.0, 1.1, respectively) compared to MTurk (M = 4.55, SD = 1.9; F(2, 1458) = 129.4, p < .001).
+
+
+In order to compute the overall data quality score, the original authors:
+
+*Relevant for present EXPLORATORY analyses:*
+
+- "Used chi-square tests to examine differences in the rates of attention, comprehension and dishonesty
+- Computed average scores for (across the items per aspect)  
+- Compared them between sites using ANOVA and regression analyses. 
+- Tested for differences between reliability coefficients using Hakistan & Whalen (1976) method"
+
+*Relevant for present CONFIRMATORY analyses:*
+
+- "Computed an overall composite score of data quality (based on the average scores of attention, comprehension and dishonesty)
+- Compare composite score of data quality between sites using ANOVA and regression."
+
+
+### Differences from Original Study
+I do not anticipate any deviations from the original *analysis plan* at this stage.
+
+
+### Methods Addendum 
+
+#### Actual Sample
+
+As of Nov 30 at 10 pm PST, the total number of recorded responses were 236. Before exporting the data file from Qualtrics, one submission from MTurk submission was removed due to the participant entering an invalid survey ID at the end. The final .CSV file included a total of 235 rows.  
+
+Unlike Peer et al. (2021), I do not exclude participants who have not responded to all of the survey as I believe that would be a manipulation on the data quality in and of itself. Instead, I omit NAs from analyses. 
+
+##### Duplicated Rows?
+*NOTE: I expect that there will be duplicated data or participants taking the survey multiple times (not sure how this happened). Duplicates have not yet been removed at the time of writing and presenting this report. I will search for (and later remove) duplicates closely by examining duplicate participation IDs, duplicate IP addresses, and duplicate qualitative responses to the open-ended questions). Once data collection from CloudResearch is complete, I will again remove participants that took the survey through both the CR posting and the MTurk posting of the project.
+
+#### Differences from pre-data collection methods plan
+
+##### Data Quality Filters 
+I planned to apply the following data quality filters that were used by Peer et al. (2021):
+
+- Data collected from MTurk - only workers who have completed 100 submissions or more and have an HIT approval rating of 95% more.
+- Data collected from Prolific -  only workers who have completed 100 submissions or more and 95% of those submissions are eligible. 
+- Data collected from CloudResearch - only workers who have completed 100 submissions or more and have an HIT approval rating of 95% more. Keep the default setting, which is set to "block low data quality workers". Implement other possible default filters that could be intentionally or mistakenly taken off by Peer et al. (2021), as suggested by Litman et al. (2021).
+
+However, on CloudResearch and Prolific, I was not able to find or create a filter that would restrict participation to those with 100 prior submissions.
+Other than that, I used the default filters from each site with the exception of adding a filter on MTurk to only allow participants who have an HIT approval rating of 95% more (premium qualifications on MTurk would incur additional fees").
+
+
+##### Variables and Items 
+
+*First Honesty Measure*
+
+Peer et al. say that 2 out of the 5 matrices used to calculate participants' honesty were unsolvable. However, after looking at the .QSF file from from their OSF page, I have come to strongly believe that there are 3 (as opposed to 2) unsolvable matrices. As such, I re-coded responses to those three items so that if participants report that they have solved those matrices, their responses will be coded as "0" for honesty. By including the third item in this honesty scale, I again, increased the possible range and possible max scores for data quality.
+
+## Results
+
+### Results from Peer et al. (2021)
+The composite Data Quality score ranged from 0 to 7 (M = 5.41; SD = 1; Med = 6). Overall data quality composite scores ranked from highest to lowest were:
+1) Prolific (M = 5.87, SD = 1.0) 
+2) CR ( M = 5.78, SD =  1.1) 
+3) MTurk (M = 4.55, SD = 1.9)
+
+Peer et al. (2021) found statistically significant differences between the sites on Overall Data Quality Score, F(2, 1458) = 129.4, p < .001.
+
+Post hoc tests with Bonferroni correction showed:
+- differences between Prolific and MTurk p < .001 
+- differences between CR and MTurk p < .001 
+- difference between CR and Prolific  p = 0.91. 
+
+
+
+### Data preparation
+
+Data preparation following the analysis plan.
+
+```{r, echo=FALSE}
+### Fixing error with knitting
+#### RMarkdown v1 used error = TRUE by default, but RMarkdown v2 uses error = FALSE.
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r, Data Preparation}
+###Data Preparation
+##### Starting a Script #####
+  # Clear environment
+    rm(list=ls())
+
+  #### Loading in data ####
+      dat <- read.csv("incompletedata2.csv",
+                       na.strings="NA", strip.white=TRUE)
+  ### Load Relevant Libraries and Functions
+    library(tidyverse)
+    library(dplyr)
+    library(car)
+    library(ggplot2)
+    library(ltm)
+
+##### Looking at your data #####
+  #### Identifying problems ####
+    # Finding the number of duplicate cases
+      # WARNING: These do not include the first instance of the duplicated value.
+      length(dat$id) - length(unique(dat$id))
+    # Finding rows of duplicate cases. 
+      # WARNING: These do not include the first instance of the duplicated value.
+      which(duplicated(dat$column))
+      
+  #### Looking at the dataset ####
+        colnames(dat) # list of column names in order
+        head(dat) # first five rows
+        View(dat) # view dataset
+        nrow(dat) #  351 rows in the dataset    ## N = 351?
+        ncol(dat) # 121 columns in dataset 
+
+#### Data exclusion / filtering
+  #### Removing unwanted data ####
+    # Omitting rows with NAs
+      data <- na.omit(dat)
+    # Removing columns we don't need about for primary analyses
+      dat <- dat %>% 
+          dplyr::select(ac1, ac2, ac3, comprehension1, 
+                        comprehension2, contains("honesty"),
+                        ResponseId, site, sample
+                        )
+      colnames(dat)
+```
+### Confirmatory analysis
+
+I report differences between sites on each data quality measure and then aggregate those findings to a composite score of data quality, reporting differences across the three sites.
+
+ATTENTION
+(originally : ACQs, χ2(4) = 548.48, 203.56, p < .001. )
+
+```{r, Attention}
+#### recode ac1 so that : pass if  ac1 = "6" ; fail ifelse
+#### record ac2 so that : pass if ac2 = "3" ; fail ifelse
+### combine ac1 and ac2 so that ac1_total = pass if ac1 = "6" and ac2 = "3"
+#### recode ac3 so that :  pass if ac3 = '1' ; fail ifelse
+
+dat <- dat %>% 
+  mutate(ac1_pass = ifelse(ac1 == "6", 1,0),
+         ac2_pass = ifelse(ac2 == "3", 1,0),
+         ac3_pass = ifelse(ac3 == "1", 1,0),
+         ac1_pass_total = ifelse(ac1 == "6" & ac2 == "3", 1,0),
+         ac_total = (ac1_pass_total + ac3_pass)
+         )
+
+### Basic Descriptive Stats for Attention from each Sample
+group_by(dat, sample) %>%
+  summarise(
+    mean = mean(ac_total, na.rm = TRUE),
+    sd = sd(ac_total, na.rm = TRUE) # the na.rm tells R to ignore NA values
+           )
+```
+
+
+COMPREHENSION
+(originally : χ2(4) = 152.4, p < .001 )
+
+```{r, Comprehension}
+#### Have 2 coders code any response that suggested a minimum level of understanding as indicating comprehension and only flag responses as incorrect if they were undoubtedly illegible. Responses that are flagged by both raters will be coded as incorrect answers.
+  ### manually code open responses to comprehension1
+  ### manually code open responses to comprehension2
+dat <- dat %>% 
+  mutate(comprehension_total = (comprehension1 + comprehension2)
+         )
+dat$comprehension_total
+
+### Basic Descriptive Stats for Comprehension from each Sample
+group_by(dat, sample) %>%
+  summarise(
+    mean = mean(comprehension_total, na.rm = TRUE),
+    sd = sd(comprehension_total, na.rm = TRUE) # the na.rm tells R to ignore NA values
+           )
+```
+
+HONESTY
+(originally :  χ2(4) = 153.44, p < .001 )
+
+Peer et al. (2021) claim that 2 out of the 5 matrices in the first measure of honesty (X1_honesty1 to X5_honesty1) are unsolve-able. However, I use the same .QSF file and find that *three* matrices are unsolve-able.  
+
+More specifically, X1_honesty1 and X2_honesty1 are solve-able so we wont be looking at participants' response to these matrices while calculating the overall honesty scores.
+
+X3_honesty1, X4_honesty1, and X5_honesty1 are NOT solve-able. Since responses were coded as 0 for "found it" and 1 for "no", they do not need to be reverse-coded to demonstrate honesty scores (e.g., a response of 0 to these three items means the participant is NOT being honest).
+
+The second honesty measure (honesty2) asks participants if they qualify for a study, for which the age range requirements are set to 5-14 years above the age the participant reported in the beginning of the survey.
+
+Honesty1 and honesty2 are combined to create the overall honesty variable (honesty_total).
+
+```{r, Honesty}
+#### code responses to honesty manually so that:
+  ### two items from honesty1 are coded such that : 0 = "found it" = dihonest    1 = "no"                                               = honest
+  ### honesty2  : 0 = not honest 1 = honest
+    ## 0 = (yes, I fit those criteria and want to take part) OR (No, I fit those criteria,     but don't want to take part)
+  # manually changed 2 to 1, na , or 0
+colnames(dat)
+dat <- dat %>%
+  mutate(honesty1_matrix = (X3_honesty1 + X4_honesty1 +
+                            X5_honesty1
+                            ),
+          honesty_total = (honesty1_matrix + honesty2
+                          )
+         )
+
+dat$honesty2
+### Basic Descriptive Stats for Honesty from each Sample
+group_by(dat, sample) %>%
+  summarise(
+    mean = mean(honesty_total, na.rm = TRUE),
+    sd = sd(honesty_total, na.rm = TRUE) # the na.rm tells R to ignore NA values
+           )
+
+
+### We can remove the unnecessary honesty columns from our dataset now 
+## dont forget to include the new variables (comprehension_total, etc.) in this process.
+colnames(dat)
+    dat <- dat %>% 
+        dplyr::select(ac1, ac2, ac3, 
+                      ac1_pass, ac2_pass, ac3_pass,
+                      ac1_pass_total,ac_total,
+                      comprehension1, comprehension2, 
+                      comprehension_total, 
+                      X3_honesty1, X4_honesty1, X5_honesty1, 
+                      honesty1_matrix, honesty2, honesty_total,
+                      ResponseId, site, sample
+                      )
+colnames(dat)
+```
+
+
+OVERALL DATA QUALITY SCORES
+(From the original study: "The score gave participants a value between 0 and 7, showing whether they passed one or both ACQs, answered correctly one or two comprehension questions,.. claim to have solved the unsolvable problems, [and claimed to qualify for a future study that they did not qualify for based on their earlier responses in the survey]. ... The overall composite score should not be considered as measuring the same construct. Rather, it is used here as a multifactorial measure that attests to the overall general level of data quality")
+
+```{r, Data Quality}
+dat <- dat %>%
+  mutate(dataquality = (ac_total + comprehension_total +
+                        honesty_total)
+          )
+
+colnames(dat)
+dat$dataquality
+```
+
+LOOKING AT ALL MEANS ON EACH PLATFORM
+```{r, looking at basic descriptives for data quality }
+group_by(dat, sample) %>%
+  summarise(
+    mean = mean(dataquality, na.rm = TRUE),
+    sd = sd(dataquality, na.rm = TRUE) # the na.rm tells R to ignore NA values
+           )
+
+summary(dat$dataquality) # dataquality ranges from 0 to 10 (M = 6.09)
+
+## original authors' data quality ranged from 0 to 7 including and as previously mentioned, they calculated - comp1 comp2 honesty1_1 honesty1_2 honesty 2 ac1 ac2 for the max data quality score of 7. 
+## however,  my range is 0 to 9 ??? I have one added honesty item from the matrix so that could increase the possible range to 8 but why is it 9?
+```
+
+COMPARING DATA QUALITY ACROSS THE GROUPS (the different sites)
+```{r, Data Quality Across Platforms}
+# Compute t test since we currently only have 2 samples
+  ## ttest <- print(t.test(dat$dataquality ~ dat$sample)) 
+    ## report(ttest) # medium significant difference with Mturk having lower data quality
+
+# once data collection is complete,, Compute one-way ANOVA
+singleANOVA <- aov(dataquality ~ sample, data = dat)
+# Summary of one-way ANOVA
+summary(singleANOVA)
+
+library("report") # Load the package every time you start R
+report(singleANOVA) # medium significant difference with MTurk having lower data quality
+
+## checking normality even though it's not necessary given the size of the samples
+# histogram
+hist(singleANOVA$residuals)
+
+# QQ-plot
+library(car)
+
+qqPlot(singleANOVA$residuals,
+  id = FALSE # id = FALSE to remove point identification
+      )
+
+## Since residuals follow a normal distribution, we can now check whether the variances are equal across different groups. The result will determine whether we use the ANOVA or the Welch ANOVA.
+
+par(mfrow = c(1, 2)) # combine plots
+
+# 1. Homogeneity of variances
+plot(singleANOVA, which = 3)
+
+# 2. Normality
+plot(singleANOVA, which = 2)
+
+```
+
+
+It turns out that there is in fact a significant difference on data quality scores based on the site you gather your data from!
+
+The Welch Two Sample t-test testing the difference of data quality scores by sample (mean in group MTurk = 5.61, mean in group Prolific = 7.19) suggests that the effect is negative, statistically significant, and medium (difference = -1.58, 95% CI [-2.44, -0.72], t(87.81) = -3.65, p < .001; Cohen's d = -0.71, 95% CI [-1.11, -0.31])
+
+The one-way ANOVA also demonstrates that the main effect of sample is statistically significant and medium (F(1, 101) = 9.32, p = 0.003; Eta2 = 0.08, 95% CI [0.02, 1.00]).
+
+
+
+```{r, t test visuals}
+#### *Side-by-side graph with original graph is ideal here*
+data <- dat %>% 
+        group_by(sample, dataquality) %>%
+        summarise()
+
+
+# boxplots and t-tests since we only have 2 samples at this point
+## Basic Boxplot
+boxplot(dat$dataquality ~ dat$sample, 
+        ylab = ("Composite Data Quality Score"), 
+        xlab = ("Sites used to Gather the Data")
+       ) ## there are no outliers
+
+
+## Elementary Boxplot
+ggplot(dat) +
+  aes(x = sample, y = dataquality) +
+  geom_boxplot() +
+  geom_smooth() +
+  theme_classic() +
+  ylab("Composite Data Quality Score") + 
+  xlab("Sites used to Gather the Data")
+
+
+## Cool colorful boxplot with P values
+library(ggpubr)
+# Edit from here #
+x <- which(names(dat) == "sample") # name of grouping variable
+y <- which(names(dat) == "dataquality"
+           | names(dat) == "ac_total"
+           | names(dat) == "comprehension_total"
+           | names(dat) == "honesty_total"
+           ) # names of variables to test
+method <- "t.test" # one of "wilcox.test" or "t.test"
+paired <- FALSE # if paired make sure that in the dataframe you have first all individuals at T1, then all individuals again at T2
+# Edit until here
+
+# Edit at your own risk
+for (i in y) {
+  for (j in x) {
+    ifelse(paired == TRUE,
+      p <- ggpaired(dat,
+        x = colnames(dat[j]), y = colnames(dat[i]),
+        color = colnames(dat[j]), line.color = "gray", line.size = 0.4,
+        palette = "npg",
+        legend = "none",
+        xlab = colnames(dat[j]),
+        ylab = colnames(dat[i]),
+        add = "jitter"
+      ),
+      p <- ggboxplot(dat,
+        x = colnames(dat[j]), y = colnames(dat[i]),
+        color = colnames(dat[j]),
+        palette = "npg",
+        legend = "none",
+        add = "jitter"
+      )
+    )
+    #  Add p-value
+    print(p + stat_compare_means(aes(label = paste0(..method.., ", p-value = ", ..p.format..)),
+      method = method,
+      paired = paired,
+      # group.by = NULL,
+      ref.group = NULL
+    ))
+  }
+}
+```
+```{r, ANOVA Visuals }
+### Run this code after data collection is complete to visualize the comparison for all 3 sites
+# Edit from here
+x <- which(names(dat) == "sample") # name of grouping variable
+y <- which(names(dat) == "dataquality"
+           | names(dat) == "ac_total"
+           | names(dat) == "comprehension_total"
+           | names(dat) == "honesty_total"# names of variables to test
+          )
+method1 <- "anova" # one of "anova" or "kruskal.test"
+method2 <- "t.test" # one of "wilcox.test" or "t.test"
+my_comparisons <- list(c("MTurk", "Prolific"), 
+                       c("MTurk", "CloudResearch"), 
+                       c("Prolific", "CloudResearch")) # comparisons for post-hoc tests
+# Edit until here
+
+# Edit at your own risk
+for (i in y) {
+  for (j in x) {
+    p <- ggboxplot(dat,
+      x = colnames(dat[j]), y = colnames(dat[i]),
+      color = colnames(dat[j]),
+      legend = "none",
+      palette = "npg",
+      add = "jitter"
+    )
+    print(
+      p + stat_compare_means(aes(label = paste0(..method.., ", p-value = ", ..p.format..)),
+        method = method1, label.y = max(dat[, i], na.rm = TRUE)
+      )
+      + stat_compare_means(comparisons = my_comparisons, method = method2, label = "p.format") # remove if p-value of ANOVA or Kruskal-Wallis test >= alpha
+    )
+  }
+}
+
+#### coolest Boxplot
+library(ggstatsplot)
+
+ggbetweenstats(data = dat,
+                x = sample,
+                y = dataquality,
+                type = "parametric", # ANOVA or Kruskal-Wallis
+                var.equal = TRUE, # ANOVA or Welch ANOVA
+                plot.type = "box",
+                pairwise.comparisons = TRUE,
+                pairwise.display = "significant",
+                centrality.plotting = FALSE,
+                bf.message = FALSE
+              )
+
+```
+-----
+
+### Exploratory analyses
+I truly wish I had more time to run exploratory analyses in time to for my final presentation and submission of this report. I began looking at data reliability and responses to the Need for Cognition Scale but have not had a chance to complete that.
+
+For the time being, please disregard the below section on reliability and the NFC scale. I look forward to looking into the data more closely once the quarter ends!
+
+RELIABILITY
+```{r, Reliability}
+#### Reliability is measured using the cronbach alpha of the NFC scale
+### The original authors re-coded the negatively worded items of the NFC before running analyses but here, our code specifically defines the reverse scored items within this scale. Since NFC is a 5-point linkert scale, I use 6-ITEM to reverse code an item.
+
+## Reverse scoring nfc items
+  # dat$nfc3_reversed <- 6-dat$nfc3
+  # dat$nfc4_reversed <- 6-dat$nfc4
+  # dat$nfc5_reversed <- 6-dat$nfc5
+  # dat$nfc7_reversed <- 6-dat$nfc7
+  # dat$nfc8_reversed <- 6-dat$nfc8
+  # dat$nfc9_reversed <- 6-dat$nfc9
+  # dat$nfc12_reversed <- 6-dat$nfc12
+  # dat$nfc16_reversed <- 6-dat$nfc16
+  # dat$nfc17_reversed <- 6-dat$nfc7
+
+## Creating the nfc scale
+  # dat <- dat %>% 
+    # mutate(nfc_scale = (nfc1 + nfc2 + nfc3_reversed +
+                   #     nfc4_reversed + nfc5_reversed +
+                   #     nfc6 + nfc7_reversed + nfc8_reversed +
+                   #     nfc9_reversed + nfc10 + nfc11 +
+                   #    nfc12_reversed + nfc13 + nfc14 +nfc15 + 
+                   #    nfc16_reversed + nfc17_reversed + nfc18
+                   #    )
+      #   )
+
+  # cronbach.alpha(nfc_total)
+```
+
+## Discussion
+
+
+### Summary of Replication Attempt
+
+The only deviations from the original study were based in:
+
+*Procedure*
+
+I did not force responses, except the demographics questions on the first page. Instead, all questions were set to “request” responses (a Qualtrics setting).
+
+*Data Quality Filters*
+
+On CloudResearch and Prolific, I was not able to find or create a filter that would restrict participation to those with 100 prior submissions. 
+
+*Second Honesty Measure* 
+
+After looking at the .QSF file from the original OSF page, I strongly believe that there are 3 (as opposed to 2) unsolvable matrices. I included all three items. By including the additional item, I increased the possible range and possible max scores for the overall honesty scores and data quality scores.
+
+
+The present study *partially replicated* the findings from Peer et al. (2021); however, data collection has not been completed at the time of this report's production. When it comes to comparisons between Prolific and MTurk, the present replicated the findings from the original study. Similar to the original study, we find that there is a statistically significant and large difference on data quality scores based on the site, with MTurk (M = 4.75, SD = 2.47) producing significantly lower quality data compared to Prolific (M = 6.26, SD = 1.41; F(2, 159) = 13.63, p <.001 or 3.44e-06 ***). However, we did not replicate higher data quality for CloudResearch (M = 3.75, SD = 2.23) compared to MTurk (M = 4.75, SD = 2.47). 
+
+
+### Commentary
+
+Deviations from the original study (e.g., procedure and exclusion criteria) are very unlikely to have moderated the results. Furthermore, the question of whether or not the original findings and the aforementioned critiques of said findings hold, will be better answered once data collection is complete. 
